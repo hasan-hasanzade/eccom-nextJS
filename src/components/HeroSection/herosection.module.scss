@@ -1,0 +1,132 @@
+@import '../../../scss/breakpoints.scss';
+@import '../../../scss/colors.scss';
+@import '../../../scss/mixins.scss';
+@import '../../../scss/typhography.scss';
+
+.hero {
+  position: relative;
+}
+
+.subtitle {
+  color: $primaryGreen;
+  font-family: $secondaryFontFamily;
+  font-size: rem(36);
+  line-height: calc(49 / 36 * 100%);
+}
+
+.body {
+  padding: 314px 0px 291px 0px;
+  position: relative;
+  z-index: 2;
+  max-width: 500px;
+}
+
+@media (max-width: $tablet) {
+  .body {
+    padding: 220px 0px 191px 0px;
+  }
+}
+
+.title {
+  font-size: 60px;
+  line-height: calc(80 / 60 * 100%);
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  margin-bottom: 35px;
+}
+
+@media (max-width: $mobile) {
+  .title {
+    font-size: 45px;
+  }
+  .subtitle {
+    font-size: rem(34);
+  }
+}
+
+@media (max-width: $mobileSmall) {
+  .title {
+    font-size: 38px;
+  }
+  .subtitle {
+    font-size: rem(30);
+  }
+}
+
+.text {
+  color: #737373;
+  font-size: 20px;
+  line-height: calc(30 / 20 * 100%);
+}
+
+@media (max-width: $mobileSmall) {
+  .text {
+    color: #585757;
+  }
+}
+
+// .main-block__buttons {
+//    display: flex;
+//    flex-wrap: wrap;
+//    margin: -10px 0;
+// }
+
+.button {
+  border-radius: 16px;
+  background-color: $primaryYellow;
+  min-height: 48px;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 36px;
+  letter-spacing: 0.2;
+  line-height: 150%;
+  text-align: center;
+  font-weight: 700;
+  transition: all 0.2s linear;
+
+  @media (max-width: $mobileSmall) {
+    padding: 12px 20px;
+    font-size: rem(15);
+  }
+}
+
+.arrow {
+  margin-left: 10px;
+  vertical-align: text-top;
+}
+
+@media (max-width: $mobileSmall) {
+  .main-block__button {
+    flex: 1 1 100%;
+  }
+}
+
+@media (min-width: 479px) {
+  .main-block__button:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  @media (max-width: $tablet) {
+    opacity: 0.5;
+  }
+  img {
+    object-position: right;
+  }
+}
+
+._ibg img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  object-fit: cover;
+}

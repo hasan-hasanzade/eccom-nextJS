@@ -1,0 +1,126 @@
+@import '../../../scss/breakpoints.scss';
+@import '../../../scss/colors.scss';
+@import '../../../scss/mixins.scss';
+@import '../../../scss/typhography.scss';
+
+.newsletter {
+  padding: 100px 0;
+  @media (max-width: $tablet) {
+    padding: 80px 0;
+  }
+  @media (max-width: $mobileSmall) {
+    padding: 60px 0;
+  }
+}
+
+.body_news {
+  position: relative;
+}
+
+.text_news {
+  font-weight: 800;
+  font-size: rem(50);
+  line-height: calc(59 / 50 * 100%);
+  // width: 40px;
+  color: $primaryWhite;
+  @media (max-width: $tablet) {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  @media (max-width: $mobile) {
+    font-size: rem(40);
+  }
+  @media (max-width: $mobileSmall) {
+    font-size: rem(25);
+  }
+}
+
+.content_news {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  padding: 100px 70px;
+  flex-wrap: wrap;
+  @media (max-width: $tablet) {
+    justify-content: center;
+  }
+  @media (max-width: $mobile) {
+    padding: 70px 50px;
+  }
+  @media (max-width: $mobileSmall) {
+    padding: 50px 30px;
+  }
+}
+
+.actions {
+  @media (max-width: $tablet) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.input_news {
+  @media (max-width: $tablet) {
+    width: 100%;
+  }
+  border-radius: 10px;
+  padding: 18px 36px;
+  font-size: rem(18);
+  font-weight: 400;
+  color: #ababab;
+  margin-bottom: 20px;
+  @media (max-width: $mobileSmall) {
+    padding: 12px 20px;
+  }
+}
+
+.button {
+  @media (max-width: $tablet) {
+    width: 100%;
+  }
+  border-radius: 10px;
+  background-color: $textBlue;
+  min-height: 28px;
+  justify-content: center;
+  align-items: center;
+  padding: 18px 36px;
+  letter-spacing: 0.2;
+  line-height: 150%;
+  text-align: center;
+  font-weight: 700;
+  transition: all 0.2s linear;
+  color: #fff;
+  margin-left: 10px;
+  @media (max-width: $tablet) {
+    margin-left: 0;
+  }
+  @media (max-width: $mobileSmall) {
+    padding: 12px 20px;
+  }
+}
+
+.image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  object-fit: cover;
+  img {
+    border-radius: 30px;
+  }
+}
+
+._ibg img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  object-fit: cover;
+}

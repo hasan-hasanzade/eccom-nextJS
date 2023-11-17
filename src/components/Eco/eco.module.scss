@@ -1,0 +1,105 @@
+@import '../../../scss/breakpoints.scss';
+@import '../../../scss/colors.scss';
+@import '../../../scss/mixins.scss';
+@import '../../../scss/typhography.scss';
+
+.wrapper {
+  display: grid;
+  grid-template-columns: percent(601, 1300) 1fr;
+  align-items: center;
+  @media (max-width: $tablet) {
+    display: flex;
+  }
+}
+
+.body {
+  position: relative;
+  z-index: 1;
+  background-color: $primaryWhite;
+  border-radius: 20px;
+  width: 95%;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  @media (max-width: $tablet) {
+    box-shadow: none;
+  }
+}
+
+.inner {
+  padding: 100px;
+  @media (max-width: 1060px) {
+    padding: 50px;
+  }
+  @media (max-width: $mobileSmall) {
+    padding: 50px 25px;
+  }
+}
+
+.subtitle {
+  text-align: left;
+  font-family: $secondaryFontFamily;
+  color: $primaryGreen;
+  font-weight: 400;
+  font-size: rem(36);
+  line-height: calc(49 / 36 * 100%);
+  margin-bottom: 10px;
+}
+
+.title {
+  text-align: left;
+  font-size: rem(50);
+  line-height: calc(59 / 50 * 100%);
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+@media (max-width: $mobile) {
+  .subtitle {
+    font-size: rem(28);
+  }
+  .title {
+    font-size: rem(40);
+  }
+}
+
+@media (max-width: $mobileSmall) {
+  .subtitle {
+    font-size: rem(25);
+  }
+  .title {
+    font-size: rem(28);
+  }
+}
+
+.item {
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.heading {
+  font-size: rem(25);
+  font-weight: 500;
+  line-height: calc(29 / 25 * 100%);
+  margin-bottom: 10px;
+  @media (max-width: $mobileSmall) {
+    font-size: rem(22);
+  }
+}
+
+.text {
+  color: $textGray;
+  font-size: rem(18);
+  font-weight: 400;
+  line-height: calc(29 / 18 * 100%);
+  @media (max-width: $mobileSmall) {
+    font-size: rem(16);
+  }
+}
+
+.image {
+  img {
+    @media (max-width: $tablet) {
+      max-width: 100%;
+    }
+  }
+}

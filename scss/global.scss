@@ -1,0 +1,114 @@
+@use 'sass:math';
+@import './mixins';
+@import './colors';
+@import './normalize';
+@import './typhography';
+@import './breakpoints';
+
+
+@if ($responsiveType==1) {
+  // Отзывчивая
+  [class*='container'] {
+    @if ($maxWidthContainer>0) {
+      max-width: rem($maxWidthContainer);
+      box-sizing: content-box;
+      margin: 0 auto;
+    }
+    @if ($containerPadding>0) {
+      padding: 0 rem(math.div($containerPadding, 2));
+    }
+  }
+} @else {
+  // По брейк-поинтам
+  [class*='__container'] {
+    margin: 0 auto;
+    @if ($maxWidthContainer>0) {
+      max-width: rem($maxWidthContainer);
+      box-sizing: content-box;
+    } @else {
+      @if ($containerPadding>0) {
+        padding: 0 rem(math.div($containerPadding, 2));
+      }
+    }
+    @media (max-width: $pc) {
+      max-width: rem(970);
+    }
+    @media (max-width: $tablet) {
+      max-width: rem(750);
+    }
+    @media (max-width: $mobile) {
+      max-width: none;
+      @if ($containerPadding>0 and $maxWidthContainer>0) {
+        padding: 0 rem(math.div($containerPadding, 2));
+      }
+    }
+  }
+}
+
+body {
+  font-weight: 500;
+  background-color: $primaryWhite;
+  font-family: $primaryFontFamily;
+  color: $textBlue;
+  .lock & {
+    overflow: hidden;
+    touch-action: none;
+  }
+}
+
+.thumb {
+  width: 18px;
+  height: 18px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 2px solid $primaryYellow;
+  top: -8px;
+}
+
+// wrapper ============================================================================================================================================================================================================================================================================================================================================================================================================================================
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  > main {
+    flex: 1 1 auto;
+  }
+  > * {
+    min-width: 0;
+  }
+}
+
+.slick-prev:before {
+  display: none;
+}
+.slick-next:before {
+  display: none;
+}
+.slick-prev {
+  left: -45px;
+}
+
+.arrow svg {
+  transform: translateX(0px);
+  transition: transform 0.3s ease;
+}
+
+.button {
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+
+
+@media (any-hover: hover) {
+  .button:hover {
+    border: 1px solid $textBlue;
+    color: $textBlue;
+    background-color: #fff;
+    .arrow svg {
+      transform: translateX(5px);
+    }
+  }
+}
