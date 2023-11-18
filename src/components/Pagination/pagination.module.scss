@@ -1,0 +1,94 @@
+@import '../../../scss/breakpoints.scss';
+@import '../../../scss/colors.scss';
+@import '../../../scss/mixins.scss';
+@import '../../../scss/typhography.scss';
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+  min-height: 0;
+}
+.item {
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  font-size: 20px;
+  height: 40px;
+  justify-content: center;
+  width: 40px;
+  transition: all 0.4s ease;
+  //   border: 2px solid $textBlue;
+  background-color: $textBlue;
+  border-radius: 40px;
+  a {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: $primaryYellow;
+      // border: 2px solid $primaryYellow;
+      color: #fff;
+    }
+  }
+}
+
+// .disabledPage {
+//    background-color: #fff;
+//    cursor: not-allowed;
+// }
+
+.active {
+  //   border: solid 2px $primaryYellow;
+  background-color: $primaryYellow;
+  border-radius: 40px;
+  color: #fff;
+}
+
+.breakMe {
+}
+
+.next {
+  //   border-left: solid 1px #808e9b;
+  font-size: 24px;
+  height: 40px;
+  position: absolute;
+  right: 0;
+  width: 40px;
+  transition: all 0.4s ease;
+  font-weight: 400;
+}
+
+.pagination {
+  align-items: center;
+  //   background-color: #0fbcf9;
+  display: flex;
+  flex-direction: row;
+  height: 60px;
+  justify-content: center;
+  list-style-type: none;
+  position: relative;
+  width: 250px;
+  gap: 10px;
+}
+
+.paginationPage {
+  font-weight: 700;
+}
+
+.previous {
+  //   border-right: solid 1px #808e9b;
+  font-size: 24px;
+  height: 40px;
+  left: 0;
+  position: absolute;
+  width: 40px;
+  transition: all 0.4s ease;
+  font-weight: 400;
+}

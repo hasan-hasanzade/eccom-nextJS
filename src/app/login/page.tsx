@@ -8,7 +8,8 @@ import { useSelector } from 'react-redux';
 import { useAppDispatch } from '../../redux/store';
 import { selectIsAuth } from '../../redux/auth/selectors';
 import { fetchLogin } from '../../redux/auth/asyncActions';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
+
 import Image from 'next/image';
 import toast, { Toaster } from 'react-hot-toast';
 
