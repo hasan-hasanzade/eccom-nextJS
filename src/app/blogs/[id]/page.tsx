@@ -4,19 +4,19 @@
 import React from 'react';
 import Newsletter from '@/components/Newsletter/Newsletter';
 import styles from './fullblog.module.scss';
-// import { CommentsBlock } from '../../components/CommentsBlock/CommentsBlock';
+import CommentsBlock from '@/components/CommentsBlock/CommentsBlock';
 import { useAppDispatch } from '@/redux/store';
 import { useSelector } from 'react-redux';
-import { blogItemSelector } from '../../redux/blog/selectors';
-import { fetchSingleBlog } from '../../redux/blog/asyncActions';
-import { useRouter } from 'next/router';
+import { blogItemSelector } from '../../../redux/blog/selectors';
+import { fetchSingleBlog } from '../../../redux/blog/asyncActions';
 
-export default function FullBlog() {
+export default function FullBlog({params}:any) {
   const dispatch = useAppDispatch();
   const data = useSelector(blogItemSelector);
-  // const { id } = useParams();
-  const router = useRouter();
-  const { id } = router.query;
+
+  const {id} = params.id;
+
+  console.log(id)
 
   React.useEffect(() => {
     if (id) {
@@ -77,7 +77,7 @@ export default function FullBlog() {
               <li>Delivers the tools you need to save time Improve field performance always</li>
             </ol>
           </div>
-          {/* <CommentsBlock /> */}
+          <CommentsBlock />
         </div>
       </section>
       <Newsletter />
