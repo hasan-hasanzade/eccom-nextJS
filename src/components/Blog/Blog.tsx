@@ -18,25 +18,14 @@ type BlogProps = {
 
 export const Blog: React.FC<BlogProps> = forwardRef(
   ({ title, imageUrl, author, text, date, month, _id }, ref: Ref<HTMLDivElement>) => {
-    const [imageLoaded, setImageLoaded] = React.useState(false);
-
-    // React.useEffect(() => {
-    //   const img = new Image();
-    //   img.src = imageUrl;
-    //   img.onload = () => {
-    //     setImageLoaded(true);
-    //   };
-    // }, [imageUrl]);
 
 
     return (
       <div ref={ref} className={styles.card}>
         <div className={styles.picture}>
-          {imageLoaded ? (
+          
             <Image className={styles.cardimg} src={imageUrl} alt="Blog" width={1920} height={480}/>
-          ) : (
-            <Image className={styles.cardimg} src='/img/skel.jpg' alt="Blog" width={1920} height={480}/>
-          )}
+
           <div className={styles.circle}>
             <span>{date}</span>
             <span className={styles.month}>{month}</span>

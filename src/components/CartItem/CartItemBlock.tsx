@@ -6,6 +6,7 @@ import { AiOutlineMinus, AiOutlinePlus, AiOutlineCloseCircle } from 'react-icons
 import { useAppDispatch } from '../../redux/store';
 import { CartItem } from '../../redux/cart/types';
 import { addItem, decreaseItem, removeItem } from '../../redux/cart/slice';
+import Image from 'next/image';
 
 type CartItemProps = {
   _id: string;
@@ -41,7 +42,7 @@ export const CartItemBlock: React.FC<CartItemProps> = ({ _id, title, price, imag
   return (
     <div className={styles.item}>
       <div className={styles.image}>
-        <img src={imageUrl} alt="" />
+        <Image src={imageUrl} alt="" width={50} height={50}/>
       </div>
       <div className={styles.content}>
         <div className={styles.leftside}>
