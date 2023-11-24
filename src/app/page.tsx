@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import HeroSection from '@/components/HeroSection/HeroSection';
 import About from '@/components/About/About';
 import Banner from '@/components/Banner/Banner';
@@ -7,6 +8,10 @@ import Offer from '@/components/Offer/Offer';
 import Eco from '@/components/Eco/Eco';
 import Newsletter from '@/components/Newsletter/Newsletter';
 import {BlogsBlock} from '@/components/BlogsBlock/BlogsBlock';
+
+export const metadata: Metadata = {
+  title: 'Home',
+};
 
 export default function Home() {
   return (

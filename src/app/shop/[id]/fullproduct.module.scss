@@ -1,4 +1,7 @@
-@use '../../scss/global' as *;
+@import '../../../../scss/breakpoints.scss';
+@import '../../../../scss/colors.scss';
+@import '../../../../scss/mixins.scss';
+@import '../../../../scss/typhography.scss';
 
 .product {
   padding: 150px 0;

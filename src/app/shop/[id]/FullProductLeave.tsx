@@ -1,24 +1,31 @@
+'use client'
+
 import React from 'react';
-import { Newsletter } from '../../components/Newsletter/Newsletter';
+import  Newsletter from '@/components/Newsletter/Newsletter';
 import styles from './fullproduct.module.scss';
 import { BsFillArrowRightCircleFill } from 'react-icons/bs';
 import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
-import { useParams } from 'react-router-dom';
 import Rating from '@mui/material/Rating';
 import { useSelector } from 'react-redux';
-import { useAppDispatch } from '../../redux/store';
-import { addItem, decreaseItem } from '../../redux/cart/slice';
-import { cartSelector } from '../../redux/cart/selectors';
-import { CartItem } from '../../redux/cart/types';
-import { singleProductSelector } from '../../redux/product/selectors';
-import { fetchSingleProduct } from '../../redux/product/asyncActions';
+import { useAppDispatch } from '@/redux/store';
+import { addItem, decreaseItem } from '@/redux/cart/slice';
+import { cartSelector } from '@/redux/cart/selectors';
+import { CartItem } from '@/redux/cart/types';
+import { singleProductSelector } from '@/redux/product/selectors';
+import { fetchSingleProduct } from '@/redux/product/asyncActions';
 
-export const FullProduct: React.FC = () => {
+type PropsId = {
+  params: {
+    id : string;
+  };
+};
+
+
+export default function FullProduct({ params: { id } }: PropsId) {
   const [tab, setTab] = React.useState(1);
   const items = useSelector(cartSelector);
   const data = useSelector(singleProductSelector);
 
-  const { id } = useParams();
   const dispatch = useAppDispatch();
 
   React.useEffect(() => {

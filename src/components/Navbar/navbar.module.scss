@@ -116,6 +116,17 @@
   }
 }
 
+.itemActive {
+  font-size: rem(20);
+  line-height: calc(24 / 20 * 100%);
+  font-weight: 500;
+  @media (max-width: 1260px) {
+    font-size: rem(17);
+  }
+  transition: color .3s ease;
+  color: $primaryGreen;
+}
+
 .bar {
   display: flex;
   align-items: center;

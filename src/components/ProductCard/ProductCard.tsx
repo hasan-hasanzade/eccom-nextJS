@@ -65,7 +65,7 @@ export const ProductCard: React.FC<ProductCardProps> = forwardRef(
             <div className={styles.category}>
               <span className={styles.categoryTitle}>{category}</span>
             </div>
-            <Link href={`/items/${_id}`} className={`${styles.image} ${styles._ibg}`}>
+            <Link href={`/shop/${_id}`} className={`${styles.image} ${styles._ibg}`}>
               <Image src={imageUrl} alt="Product" width={200} height={300} priority/>
             </Link>
             <div className={styles.bottom}>

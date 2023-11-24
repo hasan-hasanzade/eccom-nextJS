@@ -1,5 +1,5 @@
 
-import FullBlogLeave from './FullBlogLeave';
+import FullProductLeave from './FullProductLeave';
 import { Metadata, ResolvingMetadata } from 'next'
 import axios from 'axios';
 
@@ -15,8 +15,8 @@ export async function generateMetadata(
 ): Promise<Metadata> {
   const id = params.id
  
-  const product = await axios.get(`http://localhost:3333/blogs/${id}`).then((res) => res.data);
-
+  const product = await axios.get(`http://localhost:3333/shop/${id}`).then((res) => res.data);
+ 
  
   return {
     title: product.title,
@@ -26,6 +26,6 @@ export async function generateMetadata(
 
 export default function Page({ params: { id } }: Props) {
   return(
-    <FullBlogLeave params={{ id: id as string }}/>
+    <FullProductLeave params={{ id: id as string }}/>
   )
 }

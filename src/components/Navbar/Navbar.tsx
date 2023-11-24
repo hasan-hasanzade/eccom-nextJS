@@ -8,8 +8,9 @@ import { BiLogOut } from 'react-icons/bi';
 import { Cart } from '../Cart/Cart';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import { useSelector, useDispatch } from 'react-redux';
-import { cartSelector } from '../../redux/cart/selectors';
+import { cartSelector, totalCountSelector, totalPriceSelector } from '../../redux/cart/selectors';
 import styles from './navbar.module.scss';
 import { authData, selectIsAuth } from '../../redux/auth/selectors';
 import { logOut } from '../../redux/auth/slice';
@@ -31,8 +32,10 @@ export default function Navbar() {
 
   const items = useSelector(cartSelector);
 
-  const totalCount = items.reduce((sum, item) => sum + item.count, 0);
-  const totalPrice = items.reduce((sum, item) => sum + item.price * item.count, 0);
+  const totalCount = useSelector(totalCountSelector);
+  const totalPrice = useSelector(totalPriceSelector);
+
+  const pathname = usePathname()
 
   React.useEffect(() => {
     if (totalCount) {
@@ -58,7 +61,11 @@ export default function Navbar() {
     }
   };
 
-  window.addEventListener('scroll', changeNav);
+  if (typeof window !== 'undefined') {
+    window.addEventListener('scroll', changeNav);
+  }
+
+ 
 
   const handleBurger = () => {
     setIsOpen(!isOpen);
@@ -96,27 +103,27 @@ export default function Navbar() {
         <nav className={isOpen ? styles['nav-active'] : styles['nav']}>
           <ul className={styles.menu}>
             <li className={styles.list}>
-              <Link className={styles.item} onClick={closeBurgerMenu} href="/">
+              <Link className={`${styles.item} ${pathname === '/' ? styles.itemActive : ''}`} onClick={closeBurgerMenu} href="/">
                 Home
               </Link>
             </li>
             <li className={styles.list}>
-              <Link className={styles.item} onClick={closeBurgerMenu} href="/about">
+              <Link className={`${styles.item} ${pathname === '/about' ? styles.itemActive : ''}`} onClick={closeBurgerMenu} href="/about">
                 About Us
               </Link>
             </li>
             <li className={styles.list}>
-              <Link className={styles.item} onClick={closeBurgerMenu} href="/shop">
+              <Link className={`${styles.item} ${pathname === '/shop' ? styles.itemActive : ''}`} onClick={closeBurgerMenu} href="/shop">
                 Shop
               </Link>
             </li>
             <li className={styles.list}>
-              <Link className={styles.item} onClick={closeBurgerMenu} href="/blogs">
-                Blog
+              <Link className={`${styles.item} ${pathname === '/blogs' ? styles.itemActive : ''}`} onClick={closeBurgerMenu} href="/blogs">
+                Blogs
               </Link>
             </li>
             <li className={styles.list}>
-              <Link className={styles.item} onClick={closeBurgerMenu} href="/contact">
+              <Link className={`${styles.item} ${pathname === '/contact' ? styles.itemActive : ''}`} onClick={closeBurgerMenu} href="/contact">
                 Contact Us
               </Link>
             </li>

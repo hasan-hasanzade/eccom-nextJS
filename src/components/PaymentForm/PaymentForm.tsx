@@ -60,7 +60,6 @@ export default function PaymentForm() {
   const router = useRouter();
   const handleConfirm = () => {
     if (state.number && state.expiry && state.cvc && state.name) {
-      
       router.push('/checkout-success');
     } else {
       const err = () =>
@@ -92,7 +91,7 @@ export default function PaymentForm() {
         name={state.name}
         focused={focusedProp}
       />
-      <form className={styles.form}>
+      <div className={styles.form}>
         <input
           className={styles.input}
           name="number"
@@ -136,7 +135,7 @@ export default function PaymentForm() {
             Confirm
           </button>
         </div>
-      </form>
+      </div>
       <Toaster position="bottom-left" reverseOrder={false} />
     </div>
   );
