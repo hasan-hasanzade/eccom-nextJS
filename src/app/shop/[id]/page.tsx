@@ -15,7 +15,7 @@ export async function generateMetadata(
 ): Promise<Metadata> {
   const id = params.id
  
-  const product = await axios.get(`http://localhost:3333/shop/${id}`).then((res) => res.data);
+  const product = await axios.get(`https://server-tisf.onrender.com/shop/${id}`).then((res) => res.data);
  
  
   return {

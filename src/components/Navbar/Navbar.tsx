@@ -144,7 +144,7 @@ export default function Navbar() {
                   {avatarUrl ? (
                     <Image
                       className={styles.userImage}
-                      src={`http://localhost:3333${avatarUrl}`}
+                      src={`https://server-tisf.onrender.com${avatarUrl}`}
                       alt="avatar"
                       width={35}
                       height={35}
@@ -158,7 +158,7 @@ export default function Navbar() {
                 {avatarUrl ? (
                   <Image
                     className={styles.userMob}
-                    src={`http://localhost:3333${avatarUrl}`}
+                    src={`https://server-tisf.onrender.com${avatarUrl}`}
                     alt="avatar"
                     width={35}
                     height={35}

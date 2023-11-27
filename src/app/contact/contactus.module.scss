@@ -152,6 +152,7 @@
   border-radius: 30px;
   @media (max-width: $tablet) {
     align-items: center;
+    justify-content: center;
   }
   @media (max-width: $mobileSmall) {
     padding: 20px;
@@ -162,9 +163,9 @@
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
   border-radius: 20px;
   background-color: #fff;
-  margin-right: 100px;
+  margin-left: 100px;
   @media (max-width: $tablet) {
-    margin-right: 0;
+    margin-left: 0px;
   }
 }
 

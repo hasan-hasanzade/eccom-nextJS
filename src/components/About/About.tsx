@@ -31,7 +31,7 @@ export default function About() {
         <div className="container">
           <div className={styles.wrapper}>
             <motion.div custom={1} variants={textAnimation} className={styles.image}>
-              <Image src='/img/about/citrus.png' alt="cover" width={733} height={697}/>
+              <Image src='/img/about/citrus.png' alt="cover" width={733} quality={100} height={697}/>
             </motion.div>
             <div className={styles.body}>
               <motion.h2 custom={2} variants={textAnimation} className={styles.subtitle}>

@@ -130,7 +130,7 @@ export default function Register(){
               </Button> */}
               <Image
                 className={styles.userImage}
-                src={`http://localhost:3333${userImageUrl}`}
+                src={`https://server-tisf.onrender.com${userImageUrl}`}
                 alt="user"
                 width={100}
                 height={100}

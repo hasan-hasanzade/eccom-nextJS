@@ -12,6 +12,10 @@ const nextConfig = {
          hostname: 'res.cloudinary.com',
        },
        {
+        protocol: 'https',
+        hostname: 'server-tisf.onrender.com',
+      },
+       {
         protocol: 'http',
         hostname: 'localhost',
       },

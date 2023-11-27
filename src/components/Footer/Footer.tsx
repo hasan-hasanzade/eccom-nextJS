@@ -28,7 +28,7 @@ export default function Footer() {
           <div className={styles.logo}>
             <div className={styles.block}>
               <Image className={styles.image} src='/img/logo.png' alt="logo" width={155} height={224}/>
-              <div className={styles.comp}>Organick</div>
+              <div className={styles.comp}>Organic</div>
             </div>
             <p className={styles.desc}>
               Simply dummy text of the printing and typesetting industry. <br /> Lorem Ipsum simply

@@ -24,6 +24,7 @@
   margin-bottom: 50px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .icon {
@@ -70,6 +71,7 @@
 
 .item {
   margin-left: 15px;
+  width: 85%;
 }
 
 .heading {
@@ -190,6 +192,7 @@
   align-items: center;
   @media (max-width: $tablet) {
     display: flex;
+    flex-wrap: wrap;
   }
 }
 

@@ -71,7 +71,7 @@ export default function CommentsBlock() {
               {obj.author && (
                 <div className={styles.image}>
                   {obj.author.avatarUrl ? (
-                    <Image src={`http://localhost:3333${obj.author.avatarUrl}`} alt="user" width={35} height={35}/>
+                    <Image src={`https://server-tisf.onrender.com${obj.author.avatarUrl}`} alt="user" width={35} height={35}/>
                   ) : (
                     <Image src={profile} alt="user" width={35} height={35}/>
                   )}
@@ -86,10 +86,10 @@ export default function CommentsBlock() {
         ))}
         <div className={styles.post}>
           <div className={styles.userImage}>
-            {isAuth ? (
-              <Image src={`http://localhost:3333${avatarUrl}`} alt="" />
+            {isAuth && avatarUrl ? (
+              <Image src={`https://server-tisf.onrender.com${avatarUrl}`} alt="" width={35} height={35}/>
             ) : (
-              <Image src={profile} alt="" />
+              <Image src={profile} alt="" width={35} height={35}/>
             )}
           </div>
           <div className={styles.postInput}>

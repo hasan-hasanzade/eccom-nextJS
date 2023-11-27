@@ -46,7 +46,7 @@ export default function HeroSection() {
           </div>
         </div>
         <div className={`${styles.image} ${styles._ibg}`}>
-          <Image src='/img/hero/bg.png' alt="cover" width={1920} height={898}/>
+          <Image src='/img/hero/bg.png' alt="cover" priority fill/>
         </div>
       </motion.section>
     </>
