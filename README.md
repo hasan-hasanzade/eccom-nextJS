@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🌱 Organic - Food Store 🌱
 
-## Getting Started
+Welcome to Organic – your destination for pure living. Filter through premium organic products, secure transactions with ease, explore insightful blogs, and join conversations. Embrace a community-driven platform where every choice counts. Your journey to an organic lifestyle starts here.
 
-First, run the development server:
+# [Check the live demo](https://eccom-next-js.vercel.app/)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+<a href="https://eccom-next-js.vercel.app/">
+  <img src='https://res.cloudinary.com/dp9ksc7yx/image/upload/v1704463413/organic_fsmr0w.png'>
+</a>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# 🛠 Technologies Used:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
++ TypeScript
++ Redux Toolkit
++ Next JS 14
++ React Hooks
++ CSS-Modules / SCSS
++ Server:
++ Node JS
++ Express JS
++ Mongo DB
 
-## Learn More
+### 📜 Use below credentials to log in. :
 
-To learn more about Next.js, take a look at the following resources:
+<p align='left'>
+Email : organic@test.com <br>
+Password : 123456
+</p>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### [Check the server side code](https://github.com/hasan-hasanzade/ecommerce-mern-server)
 
-## Deploy on Vercel
+# Author
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+ :copyright: H&H
+ 
+ :octocat: [@hasan-hasanzade](https://github.com/hasan-hasanzade)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
