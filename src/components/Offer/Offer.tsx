@@ -3,7 +3,7 @@
 import React from 'react';
 import styles from './offer.module.scss';
 import { BsFillArrowRightCircleFill } from 'react-icons/bs';
-import { MProductCard } from '../ProductCard/ProductCard';
+import { ProductCard } from '../ProductCard/ProductCard';
 import Link from 'next/link';
 import { useSelector } from 'react-redux';
 import { useAppDispatch } from '../../redux/store';
@@ -36,17 +36,17 @@ export default function Offer() {
     }),
   };
 
-  const productAnimation = {
-    hidden: {
-      x: 0,
-      opacity: 0,
-    },
-    visible: (custom: number) => ({
-      x: 0,
-      opacity: 1,
-      transition: { type: 'tween', duration: 1, delay: custom * 0.5 },
-    }),
-  };
+  // const productAnimation = {
+  //   hidden: {
+  //     x: 0,
+  //     opacity: 0,
+  //   },
+  //   visible: (custom: number) => ({
+  //     x: 0,
+  //     opacity: 1,
+  //     transition: { type: 'tween', duration: 1, delay: custom * 0.5 },
+  //   }),
+  // };
 
   return (
     <motion.section
@@ -72,14 +72,10 @@ export default function Offer() {
           </motion.div>
         </div>
         <motion.div
-          initial="hidden"
-          whileInView={'visible'}
-          viewport={{ amount: 0.2, once: true }}
+custom={3} variants={textAnimation}
           className={styles.body}>
           {items.slice(4, 8).map((obj, i) => (
-            <MProductCard
-              custom={i + 1}
-              variants={productAnimation}
+            <ProductCard
               key={obj._id}
               rating={obj.rating}
               _id={obj._id}

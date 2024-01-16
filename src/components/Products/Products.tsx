@@ -2,7 +2,7 @@
 
 import React from 'react';
 import styles from './products.module.scss';
-import { MProductCard } from '../ProductCard/ProductCard';
+import { ProductCard } from '../ProductCard/ProductCard';
 import { useSelector } from 'react-redux';
 import { useAppDispatch } from '../../redux/store';
 import { productSelector } from '../../redux/product/selectors';
@@ -34,17 +34,6 @@ export default function Products() {
     }),
   };
 
-  const productAnimation = {
-    hidden: {
-      x: 0,
-      opacity: 0,
-    },
-    visible: (custom: number) => ({
-      x: 0,
-      opacity: 1,
-      transition: { type: 'tween', duration: 1, delay: custom * 0.5 },
-    }),
-  };
 
   return (
     <motion.section
@@ -60,14 +49,10 @@ export default function Products() {
           Our Products
         </motion.div>
         <motion.div
-          initial="hidden"
-          whileInView={'visible'}
-          viewport={{ amount: 0.2, once: true }}
+          custom={2} variants={textAnimation}
           className={styles.body}>
           {items.slice(8, 16).map((obj, i) => (
-            <MProductCard
-              custom={i + 1}
-              variants={productAnimation}
+            <ProductCard
               key={obj._id}
               rating={obj.rating}
               _id={obj._id}

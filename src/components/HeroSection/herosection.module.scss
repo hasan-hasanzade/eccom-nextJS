@@ -5,7 +5,10 @@
 
 .hero {
   position: relative;
+  font-family: $primaryFontFamily;
 }
+
+
 
 .subtitle {
   color: $primaryGreen;
@@ -54,6 +57,7 @@
 }
 
 .text {
+  font-family: $primaryFontFamily;
   color: #737373;
   font-size: 20px;
   line-height: calc(30 / 20 * 100%);

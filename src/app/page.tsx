@@ -10,7 +10,7 @@ import Newsletter from '@/components/Newsletter/Newsletter';
 import {BlogsBlock} from '@/components/BlogsBlock/BlogsBlock';
 
 export const metadata: Metadata = {
-  title: 'Home',
+  title: 'Home | Organic',
 };
 
 export default function Home() {

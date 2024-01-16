@@ -13,6 +13,7 @@ import { cartSelector } from '@/redux/cart/selectors';
 import { CartItem } from '@/redux/cart/types';
 import { singleProductSelector } from '@/redux/product/selectors';
 import { fetchSingleProduct } from '@/redux/product/asyncActions';
+import FullSkeleton from './FullSkeleton';
 
 type PropsId = {
   params: {
@@ -25,14 +26,21 @@ export default function FullProduct({ params: { id } }: PropsId) {
   const [tab, setTab] = React.useState(1);
   const items = useSelector(cartSelector);
   const data = useSelector(singleProductSelector);
+  const [isLoading, setIsLoading] = React.useState(true);
 
   const dispatch = useAppDispatch();
 
   React.useEffect(() => {
     if (id) {
-      dispatch(fetchSingleProduct(id));
+      dispatch(fetchSingleProduct(id)).then(() => {
+        setIsLoading(false);
+      });
     }
   }, [id]);
+
+  if (isLoading) {
+    return <FullSkeleton />;
+  }
 
   if (!data) {
     return <div>Loading...</div>;

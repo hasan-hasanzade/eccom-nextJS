@@ -12,7 +12,6 @@ import { cartSelector } from '../../redux/cart/selectors';
 import { CartItem } from '../../redux/cart/types';
 import toast, { Toaster } from 'react-hot-toast';
 import { forwardRef, Ref } from 'react';
-import { motion } from 'framer-motion';
 
 type ProductCardProps = {
   _id: string;
@@ -100,5 +99,3 @@ export const ProductCard: React.FC<ProductCardProps> = forwardRef(
     );
   },
 );
-
-export const MProductCard = motion(ProductCard);

@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { Status } from '../types/statusEnum';
 import { AuthSliceState } from '../auth/types';
-import { fetchRegister, fetchLogin, fetchAuthMe } from '../auth/asyncActions';
+import { fetchRegister, fetchLogin, fetchAuthMe, uploadImage, deleteImage } from '../auth/asyncActions';
 
 const initialState: AuthSliceState = {
   data: null,
@@ -57,6 +57,26 @@ const authSlice = createSlice({
       .addCase(fetchAuthMe.rejected, (state) => {
         state.status = Status.ERROR;
         state.data = null;
+      })
+      .addCase(uploadImage.pending, (state) => {
+        state.status = Status.LOADING;
+      })
+      .addCase(uploadImage.fulfilled, (state, action) => {
+        state.status = Status.SUCCESS;
+        state.userImageUrl = action.payload;
+      })
+      .addCase(uploadImage.rejected, (state) => {
+        state.status = Status.ERROR;
+      })
+      .addCase(deleteImage.pending, (state) => {
+        state.status = Status.LOADING;
+      })
+      .addCase(deleteImage.fulfilled, (state, action) => {
+        state.status = Status.SUCCESS;
+        state.userImageUrl = action.payload;
+      })
+      .addCase(deleteImage.rejected, (state) => {
+        state.status = Status.ERROR;
       });
   },
 });

@@ -6,7 +6,6 @@ import Navbar from '@/components/Navbar/Navbar';
 import { ReduxProvider } from '@/redux/provider';
 
 const roboto = Roboto({ subsets: ['latin'], weight: ['400', '500', '700', '900'], display: 'swap', });
-const yellowTail = Yellowtail({ subsets: ['latin'], weight: ['400'], display: 'swap', });
 
 export const metadata: Metadata = {
   title: {

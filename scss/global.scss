@@ -5,7 +5,6 @@
 @import './typhography';
 @import './breakpoints';
 
-
 @if ($responsiveType==1) {
   // Отзывчивая
   [class*='container'] {

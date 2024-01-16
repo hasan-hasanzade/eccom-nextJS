@@ -5,7 +5,7 @@ import styles from './shop.module.scss';
 import { PageBanner } from '@/components/PageBanner/PageBanner';
 import bg from '../../../public/img/shop/shop.jpg';
 import { SideBar } from '@/components/SideBar/SideBar';
-import { MProductCard } from '../../components/ProductCard/ProductCard';
+import { ProductCard } from '../../components/ProductCard/ProductCard';
 import Skeleton from '@/components/ProductCard/Skeleton';
 import { Pagination } from '@/components/Pagination/Pagination';
 import { SearchError } from '@/components/SearchError/SearchError';
@@ -153,7 +153,7 @@ export default function ShopLeave() {
               )}
               {isLoading
                 ? [...new Array(8)].map((_, index) => <Skeleton key={index} />)
-                : items.map((obj) => <MProductCard key={obj._id} {...obj} />)}
+                : items.map((obj) => <ProductCard key={obj._id} {...obj} />)}
             </div>
             <Pagination handlePageClick={handlePageClick} pageCount={pageCount} />
           </div>

@@ -23,3 +23,18 @@ export const fetchLogin = createAsyncThunk(
    const { data } = await axios.get('/auth/me');
    return data as Data;
  });
+
+ export const uploadImage = createAsyncThunk(
+  'auth/uploadImage',
+  async (file: File) => {
+    const formData = new FormData();
+    formData.append('image', file);
+    const { data } = await axios.post('/upload', formData);
+    return data.url as string;
+  }
+);
+
+export const deleteImage = createAsyncThunk('auth/deleteImage', async () => {
+  await axios.delete('/deleteImage');
+  return '';
+});
