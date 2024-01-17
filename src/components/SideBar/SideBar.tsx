@@ -40,11 +40,13 @@ export const SideBar: React.FC<SideBarProps> = ({
   const [selectedSort, setSelectedSort] = React.useState('popular ( high to low )');
 
   const { priceRange, searchValue } = useSelector(filterSelector);
+  const filterState = useSelector(filterSelector);
 
   const dispatch = useDispatch();
 
   const onClickCategory = (categoryName: string) => {
-    dispatch(setCategoryName(categoryName === 'All' ? '' : categoryName));
+    const selectedCategory = categoryName === 'All' ? '' : categoryName;
+    dispatch(setCategoryName(selectedCategory));
     handleCategory();
   };
 
@@ -93,9 +95,18 @@ export const SideBar: React.FC<SideBarProps> = ({
               <h5 className={styles.heading}>Categories :</h5>
               <ul className={styles.list}>
                 {categories.map((categoryName, i) => (
-                  <li key={i} onClick={() => onClickCategory(categoryName)} className={styles.item}>
-                    {categoryName}
-                  </li>
+                  <li
+                  key={i}
+                  onClick={() => onClickCategory(categoryName)}
+                  className={`${styles.item} ${
+                    (categoryName === 'All' && filterState.categoryName === '') ||
+                    categoryName === filterState.categoryName
+                      ? styles.activeCat
+                      : ''
+                  }`}
+                >
+                  {categoryName}
+                </li>
                 ))}
               </ul>
             </div>

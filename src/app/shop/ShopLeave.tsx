@@ -16,7 +16,6 @@ import { filterSelector } from '../../redux/filter/selectors';
 import { productSelector } from '../../redux/product/selectors';
 import { resetItems } from '../../redux/product/slice';
 import { fetchFilteredItems } from '../../redux/product/asyncActions';
-// import { useLocation } from 'react-router-dom';
 
 export default function ShopLeave() {
   const [isLoading, setIsLoading] = React.useState(true);
@@ -30,9 +29,7 @@ export default function ShopLeave() {
 
   const dispatch = useAppDispatch();
 
-  // const location = useLocation();
-  // const searchParams = new URLSearchParams(location.search);
-  // const categoryParam = searchParams.get('category');
+
 
   React.useEffect(() => {
     if (categoryName !== 'all') {
