@@ -8,7 +8,7 @@ import { useAppDispatch } from '@/redux/store';
 import { useSelector } from 'react-redux';
 import { blogItemSelector } from '../../../redux/blog/selectors';
 import { fetchSingleBlog } from '../../../redux/blog/asyncActions';
-import { Metadata, ResolvingMetadata } from 'next'
+import Image from 'next/image';
 
 type PropsId = {
   params: {
@@ -19,6 +19,8 @@ type PropsId = {
 export default function FullBlog({ params: { id } }: PropsId) {
   const dispatch = useAppDispatch();
   const data = useSelector(blogItemSelector);
+
+  
 
   React.useEffect(() => {
     if (id) {
@@ -32,11 +34,12 @@ export default function FullBlog({ params: { id } }: PropsId) {
 
   const { imageUrl, month, date, title, text, mainText, author } = data;
 
+
   return (
     <>
       <section className={styles.image}>
         <div className={styles.img}>
-          <img src={imageUrl} alt="" />
+          <Image placeholder='blur' blurDataURL='https://source.unsplash.com/iUxjs-F0voI' height={720} width={1080} quality={100} src={imageUrl} alt="Blog image" />
         </div>
       </section>
       <section className={styles.content}>
