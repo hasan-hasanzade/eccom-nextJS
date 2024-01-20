@@ -1,5 +1,5 @@
 export type FilteredData = {
-  items: Product[]; // Assuming Product is already defined
+  items: Product[];
   totalCount: number;
   pageCount: number;
   currentPage: number;
