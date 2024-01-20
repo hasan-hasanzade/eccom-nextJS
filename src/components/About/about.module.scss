@@ -163,8 +163,13 @@
 }
 
 .image {
+  @media (max-width: $tablet) {
+    width: 100%;
+    text-align: center;
+  }
   img {
-    max-width: 100%;
+    width: auto;
+    height: auto;
   }
 }
 
@@ -188,7 +193,7 @@
 
 .wrapper {
   display: grid;
-  grid-template-columns: percent(611, 1300) 1fr;
+  grid-template-columns: percent(711, 1300) 1fr;
   align-items: center;
   @media (max-width: $tablet) {
     display: flex;

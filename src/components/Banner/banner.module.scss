@@ -28,7 +28,8 @@
   position: relative;
   img {
     border-radius: 30px;
-    max-width: 100%;
+    width: auto;
+    height: auto;
   }
 }
 
@@ -145,7 +146,7 @@
   }
 }
 
-@media (max-width: $mobileSmall) {
+@media (max-width: $mobile) {
   .ftitle {
     color: $primaryWhite;
     font-size: rem(25);

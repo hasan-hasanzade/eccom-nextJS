@@ -48,7 +48,7 @@ export default function AboutLeave() {
           <div className="container">
             <div className={styles.body}>
               <motion.div custom={1} variants={textAnimation} className={styles.image}>
-                <Image src='/img/about-page/hero.png' alt="" width={914} height={466}/>
+                <Image src='/img/about-page/hero.png' alt="" width={914} height={466} quality={100} sizes="(max-width: 640px) 40vw 30vh, (max-width: 768px) 50vw, 25vw"/>
               </motion.div>
               <div className={styles.content}>
                 <motion.div custom={2} variants={textAnimation} className={styles.heading}>
@@ -148,7 +148,7 @@ export default function AboutLeave() {
                 </div>
               </div>
               <motion.div custom={2} variants={textAnimation} className={styles.store_image}>
-                <Image src='/img/about-page/green.jpg' alt="green products" width={678} height={580}/>
+                <Image src='/img/about-page/green.jpg' alt="green products" width={623} quality={100} height={580} sizes="(max-width: 640px) 10vw, (max-width: 768px) 50vw, 25vw"/>
               </motion.div>
             </div>
             <motion.div

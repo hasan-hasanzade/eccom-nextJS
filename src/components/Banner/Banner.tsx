@@ -59,7 +59,7 @@ export default function Banner() {
               </div>
             </div>
             <div className={styles.vbanner}>
-              <Image src='/img/hero/veget.png' alt="vegetables" width={683} height={367} />
+              <Image src='/img/hero/veget.png' alt="vegetables" width={683} height={367} quality={80}/>
             </div>
           </motion.div>
         </Link>

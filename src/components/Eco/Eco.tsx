@@ -25,7 +25,7 @@ export default function Eco() {
       className={styles.eco}>
       <div className={styles.wrapper}>
         <div className={styles.image}>
-          <Image src='/img/eco/bgeco.jpg' alt="background" width={952} height={931}/>
+          <Image quality={100} src='/img/eco/bgeco.jpg' alt="background" width={952} height={931}/>
         </div>
         <div className={styles.body}>
           <div className={styles.inner}>

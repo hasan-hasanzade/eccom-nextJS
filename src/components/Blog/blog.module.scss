@@ -19,6 +19,9 @@
   border-top-right-radius: 30px;
 
   max-width: 100%;
+  @media (max-width: $mobile) {
+    height: 30vh;
+  }
 }
 
 .cardImgLoad {

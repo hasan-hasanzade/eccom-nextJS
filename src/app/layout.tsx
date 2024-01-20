@@ -33,11 +33,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={roboto.className}>
+        <div className="wrapper">
         <ReduxProvider>
           <Navbar />
           {children}
           <Footer />
         </ReduxProvider>
+        </div>
+
       </body>
     </html>
   );

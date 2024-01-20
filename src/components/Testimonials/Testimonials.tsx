@@ -117,7 +117,7 @@ export default function Testimonials() {
             <Slider {...settings}>
               <div className={styles.item}>
                 <div className={styles.user}>
-                  <Image src='/img/testimonial/sara.png' alt="consumer" width={116} height={115}/>
+                  <Image quality={100} src='/img/testimonial/sara.png' alt="consumer" width={116} height={115}/>
                 </div>
                 <div className={styles.rating}>
                   <Rating name="read-only" defaultValue={5} precision={0.5} readOnly />
@@ -132,7 +132,7 @@ export default function Testimonials() {
               </div>
               <div className={styles.item}>
                 <div className={styles.user}>
-                  <Image src='/img/testimonial/chris.jpg' alt="consumer" width={115} height={115}/>
+                  <Image quality={100} src='/img/testimonial/chris.jpg' alt="consumer" width={115} height={115}/>
                 </div>
                 <div className={styles.rating}>
                   <Rating name="read-only" defaultValue={5} precision={0.5} readOnly />
@@ -146,7 +146,7 @@ export default function Testimonials() {
               </div>
               <div className={styles.item}>
                 <div className={styles.user}>
-                  <Image src='/img/testimonial/jenny.jpg' alt="consumer" width={256} height={256}/>
+                  <Image quality={100} src='/img/testimonial/jenny.jpg' alt="consumer" width={115} height={115}/>
                 </div>
                 <div className={styles.rating}>
                   <Rating name="read-only" defaultValue={5} precision={0.5} readOnly />
@@ -224,7 +224,7 @@ export default function Testimonials() {
         </div>
       </div>
       <div className={`${styles.image} ${styles._ibg}`}>
-        <Image src='/img/testimonial/bgtest.png' alt="Background Image" width={1920} height={1267}/>
+        <Image quality={100} src='/img/testimonial/bgtest.png' alt="Background Image" width={1920} height={1267}/>
       </div>
     </motion.section>
   );
