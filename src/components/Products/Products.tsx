@@ -51,7 +51,7 @@ export default function Products() {
         <motion.div
           custom={2} variants={textAnimation}
           className={styles.body}>
-          {items.slice(8, 16).map((obj, i) => (
+          {items.slice(8, 16).map((obj: any) => (
             <ProductCard
               key={obj._id}
               rating={obj.rating}
