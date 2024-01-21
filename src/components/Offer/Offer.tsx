@@ -74,7 +74,7 @@ export default function Offer() {
         <motion.div
 custom={3} variants={textAnimation}
           className={styles.body}>
-          {items.slice(4, 8).map((obj, i) => (
+          {items.slice(4, 8).map((obj: any) => (
             <ProductCard
               key={obj._id}
               rating={obj.rating}

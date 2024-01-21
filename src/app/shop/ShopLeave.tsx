@@ -150,7 +150,7 @@ export default function ShopLeave() {
               )}
               {isLoading
                 ? [...new Array(8)].map((_, index) => <Skeleton key={index} />)
-                : items.map((obj) => <ProductCard key={obj._id} {...obj} />)}
+                : items.map((obj: any) => <ProductCard key={obj._id} {...obj} />)}
             </div>
             <Pagination handlePageClick={handlePageClick} pageCount={pageCount} />
           </div>
