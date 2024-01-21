@@ -1,0 +1,54 @@
+@import '../../../scss/breakpoints.scss';
+@import '../../../scss/colors.scss';
+@import '../../../scss/mixins.scss';
+@import '../../../scss/typhography.scss';
+
+.shop {
+  padding: 80px 0;
+  @media (max-width: $tablet) {
+    padding: 60px 0;
+  }
+  @media (max-width: 800px) {
+    padding: 0;
+  }
+
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  @media (max-width: 800px) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.inner {
+  flex: 1 1 auto;
+}
+
+.body {
+  padding: 0 50px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 40px;
+
+  @media (max-width: 1400px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media (max-width: 1060px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 800px) {
+    padding: 0 20px;
+    margin-top: 50px;
+    grid-template-columns: repeat(2, 50%);
+    align-items: center;
+    justify-content: center;
+  }
+  @media (max-width: $mobileSmall) {
+    gap: 15px;
+  }
+}

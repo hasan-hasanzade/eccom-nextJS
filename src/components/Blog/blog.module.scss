@@ -1,0 +1,143 @@
+@import '../../../scss/breakpoints.scss';
+@import '../../../scss/colors.scss';
+@import '../../../scss/mixins.scss';
+@import '../../../scss/typhography.scss';
+
+.picture {
+  position: relative;
+  width: 100%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.cardimg {
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+
+  max-width: 100%;
+}
+
+.cardImgLoad {
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  max-width: 100%;
+}
+
+.circle {
+  background-color: $primaryWhite;
+  top: 30px;
+  left: 30px;
+  position: absolute;
+  width: 132px;
+  height: 75px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: $tablet) {
+    width: 96px;
+    height: 62px;
+    top: 20px;
+    left: 20px;
+  }
+  @media (max-width: $mobileSmall) {
+    width: 82px;
+    height: 52px;
+    top: 10px;
+    left: 10px;
+  }
+
+  span {
+    font-weight: 700;
+    font-size: rem(25);
+    line-height: calc(30 / 25 * 100%);
+    @media (max-width: $tablet) {
+      font-size: rem(19);
+    }
+    @media (max-width: $mobileSmall) {
+      font-size: rem(16);
+    }
+  }
+}
+
+.arrow {
+  margin-left: 10px;
+  vertical-align: text-top;
+}
+
+.bottom {
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  flex: 1;
+  background-color: rgb(255, 255, 255);
+  // width: 620px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.inner {
+  text-align: left;
+  padding: 35px;
+}
+
+.name {
+  flex: 1 1 auto;
+  font-size: rem(18);
+  font-weight: 400;
+  line-height: calc(22 / 18 * 100%);
+  margin-bottom: 10px;
+  @media (max-width: $mobile) {
+    font-size: rem(17);
+  }
+}
+
+.blogname {
+  font-size: rem(25);
+  font-weight: 800;
+  line-height: calc(29 / 25 * 100%);
+  margin-bottom: 10px;
+  @media (max-width: $mobile) {
+    font-size: rem(22);
+  }
+}
+
+.text {
+  color: $textGray;
+  font-size: rem(18);
+  font-weight: 400;
+  line-height: calc(22 / 18 * 100%);
+  margin-bottom: 30px;
+  @media (max-width: $mobile) {
+    font-size: rem(17);
+  }
+}
+
+.button {
+  border-radius: 16px;
+  background-color: $primaryYellow;
+  min-height: 28px;
+  justify-content: center;
+  align-items: center;
+  padding: 18px 36px;
+  letter-spacing: 0.2;
+  line-height: 150%;
+  text-align: center;
+  font-weight: 700;
+  transition: all 0.2s linear;
+  @media (max-width: $mobileSmall) {
+    padding: 12px 20px;
+    font-size: rem(15);
+  }
+}
+
+// .month {
+//   width: 55px;
+//   letter-spacing: 1px;
+//   white-space: nowrap; /* Prevent text from wrapping to the next line */
+//   overflow: hidden; /* Hide the overflow of the text */
+//   // text-overflow: ellipsis;
+// }

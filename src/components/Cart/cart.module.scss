@@ -1,0 +1,262 @@
+@import '../../../scss/breakpoints.scss';
+@import '../../../scss/colors.scss';
+@import '../../../scss/mixins.scss';
+@import '../../../scss/typhography.scss';
+
+.overlay {
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100vh;
+   background-color: rgba(0, 0, 0, .5);
+   z-index: 999;
+   visibility: hidden;
+   opacity: 0;
+   transition: opacity .3s ease, visibility .3s ease;
+}
+
+
+.overlayVisible {
+   visibility: visible;
+   opacity: 1;
+
+   .drawer {
+      transform: translateX(0);
+   }
+}
+
+.drawer {
+   position: absolute;
+   width: 500px;
+   background-color: #fff;
+   top: 0;
+   right: 0;
+   height: 100%;
+   @media (max-width:500px) {
+      width: 100%;
+   }
+   transform: translateX(100%);
+   transition: transform .3s ease;
+}
+
+.inner {
+   padding: 30px;
+}
+
+.heading {
+   padding: 0 0 30px 0;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   border-bottom: 1px solid #dedede;
+   margin-bottom: 20px;
+}
+
+.head {
+   font-weight: 700;
+   font-size: 25px;
+}
+
+.body {
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   gap: 20px;
+   width: 100%;
+   flex: 1;
+   overflow: auto;
+   margin-bottom: 20px;
+   padding: 10px;
+}
+
+.price {
+   color: #a7a7a7 ;
+   letter-spacing: 0.3px;
+}
+
+.item {
+   width: inherit;
+   display: flex;
+   border: 1px solid #dedede;
+   padding: 10px;
+   border-radius: 20px;
+   align-items: center;
+   
+}
+.content {
+   flex: 1 1 auto;
+   display: flex;
+   justify-content: space-between;
+}
+.actions {
+   display: flex;
+   align-items: center;
+}
+
+.circle {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.leftside {
+   padding: 10px 0 10px 20px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+  
+}
+
+.rightside {
+   padding: 0 0 20px 20px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   @media (max-width:450px) {
+      padding: 0 0 11px 20px;
+   }
+   @media (max-width:330px) {
+      padding: 0 0 11px 10px;
+   }
+}
+
+.title {
+   margin-bottom: 20px;
+   font-weight: 500;
+   font-size: 20px;
+   @media (max-width:$mobileSmall) {
+      font-size: 18px;
+   }
+   @media (max-width:370px) {
+      font-size: 17px;
+      margin-bottom: 10px;
+   }
+}
+
+.minus {
+   border: 1px solid #dedede;
+   width: 37px;
+   height: 33px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   @media (max-width:$mobileSmall) {
+      width: 27px;
+   height: 23px;
+   }
+}
+
+.plus {
+   border: 1px solid #dedede;
+   width: 37px;
+   height: 33px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   @media (max-width:$mobileSmall) {
+      width: 27px;
+   height: 23px;
+   }
+}
+
+.input {
+   border: 1px solid #dedede;
+   width: 45px;
+   height: 33px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 8px;
+   @media (max-width:$mobileSmall) {
+      width: 30px;
+   height: 23px;
+   }
+}
+
+.image {
+   img {
+      width: 70px;
+      height: 90px;
+      border-radius: 20px;
+   }
+}
+
+.bottom {
+   display: flex;
+   flex-direction: column;
+}
+
+.text {
+   font-size: 20px;
+}
+
+.btn {
+   border-radius: 16px;
+   background-color: $primaryGreen;
+   min-height: 48px;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   padding: 22px 36px;
+   letter-spacing: 0.2;
+   line-height: 150%;
+   text-align: center;
+   font-weight: 700;
+   transition: all .2s linear;
+   border: 1px solid transparent;
+   color: $primaryWhite;
+   font-size: 20px;
+   @media (max-width:$mobileSmall) {
+      padding: 12px 26px;
+   }
+  
+}
+
+@media (any-hover: hover) {
+   .btn:hover {
+      background-color: #fff;
+      border: 1px solid $primaryGreen;
+      color: $primaryGreen;
+   }
+}
+
+.button {
+   border-radius: 16px;
+   background-color: $textBlue;
+   min-height: 48px;
+   justify-content: center;
+   align-items: center;
+   padding: 22px 36px;
+   letter-spacing: 0.2;
+   line-height: 150%;
+   text-align: center;
+   font-weight: 700;
+   transition: all .2s linear;
+   color: $primaryWhite;
+   font-size: 20px;
+   margin-bottom: 20px;
+   @media (max-width:$mobileSmall) {
+      padding: 12px 26px;
+   }
+}
+
+.total {
+   display: flex;
+   justify-content: space-between;
+   border-top: 1px solid #dedede;
+   border-bottom: 1px solid #dedede;
+   padding: 20px 0;
+   margin-bottom: 20px;
+}
+
+.number {
+   color: #a7a7a7 ;
+   letter-spacing: 0.3px;
+}
+
+.inner {
+   display: flex;
+   flex-direction: column;
+   height: 100%;
+}

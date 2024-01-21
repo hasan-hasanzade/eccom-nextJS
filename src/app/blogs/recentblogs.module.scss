@@ -1,0 +1,31 @@
+@import '../../../scss/breakpoints.scss';
+@import '../../../scss/colors.scss';
+@import '../../../scss/mixins.scss';
+@import '../../../scss/typhography.scss';
+
+.blogs {
+  padding: 130px 0;
+  @media (max-width: $tablet) {
+    padding: 80px 0;
+  }
+  @media (max-width: $mobileSmall) {
+    padding: 60px 0;
+  }
+  text-align: center;
+}
+
+.body {
+  display: grid;
+  gap: 102px;
+  grid-template-columns: repeat(auto-fit, minmax(385px, 1fr));
+  @media (max-width: $tablet) {
+    gap: 52px;
+    grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+  }
+}
+
+.blogCard {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}

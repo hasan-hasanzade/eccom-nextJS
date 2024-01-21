@@ -1,0 +1,90 @@
+@import '../../../scss/breakpoints.scss';
+@import '../../../scss/colors.scss';
+@import '../../../scss/mixins.scss';
+@import '../../../scss/typhography.scss';
+
+
+.payment {
+  @media (max-width: $tablet) {
+    margin-top: 30px;
+  }
+}
+
+.form {
+  margin-top: 20px;
+  @media (max-width: $mobileSmall) {
+    width: 100%;
+    border-radius: 0;
+    margin-top: 50px;
+    padding: 30px 10px;
+  }
+  width: 400px;
+  background-color: rgba(67, 66, 66, 0.7);
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+  padding: 50px 35px;
+}
+
+.input {
+  padding: 10px;
+  height: 50px;
+  width: 100%;
+  background-color: rgba(52, 52, 52, 0.3);
+  border-radius: 16px;
+  padding: 0 10px;
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #fff;
+  border: 2px solid transparent;
+  //   &:not(:first-child) {
+  //     margin-top: 15px;
+  //   }
+}
+
+.button {
+  border-radius: 16px;
+  background-color: $primaryGreen;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.5px;
+  width: 100%;
+  line-height: 150%;
+  text-align: center;
+  font-weight: 700;
+  transition: all 0.2s linear;
+  color: $primaryWhite;
+  font-size: 20px;
+  margin-bottom: 20px;
+  @media (max-width: $mobileSmall) {
+    padding: 12px 26px;
+    font-size: 18px;
+  }
+}
+
+.btn {
+  margin-top: 30px;
+  width: 100%;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottomInputs {
+  margin-top: 10px;
+  padding: 10px;
+  width: 48%;
+  height: 50px;
+  background-color: rgba(52, 52, 52, 0.3);
+  border-radius: 16px;
+  padding: 0 10px;
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #fff;
+  border: 2px solid transparent;
+}
