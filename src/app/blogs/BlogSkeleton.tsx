@@ -4,8 +4,8 @@ export const BlogSkeleton: React.FC = (props: any) => {
   return (
     <ContentLoader
       speed={2}
-      width={700}
-      height={660}
+      width="100%"
+        height="100%"
       viewBox="0 0 650 674"
       backgroundColor="#f3f3f3"
       foregroundColor="#ecebeb"
