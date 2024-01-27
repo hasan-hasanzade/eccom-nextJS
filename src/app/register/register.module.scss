@@ -9,13 +9,11 @@
     padding: 390px;
   }
 }
+
 .user {
    margin-top: 15px;
    margin-bottom: 30px;
    text-align: center;
-}
-.delete {
-  margin-left: 10px;
 }
 .form {
   margin-top: 60px;
@@ -26,15 +24,12 @@
     padding: 30px 10px;
   }
   width: 400px;
-  // background-color: rgba(0, 0, 0, 0.13);
   background-color: rgba(67, 66, 66, .7);
-  // background-color: #434242;
   position: absolute;
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
   border-radius: 10px;
-  // backdrop-filter: blur(10px);
   border: 2px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
   padding: 50px 35px;

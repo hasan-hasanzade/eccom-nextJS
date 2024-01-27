@@ -16,18 +16,24 @@ import { AuthSliceState } from './auth/types';
 import { BlogSliceState } from './blog/types';
 import { CommentSliceState } from './comment/types';
 
+const authPersistConfig = {
+  key: 'auth',
+  storage,
+  whitelist: ['data'],
+};
+
 export const store = configureStore({
   reducer: persistReducer(
     {
       key: 'root',
       storage,
-      whitelist: ['auth', 'cart'],
+      whitelist: ['cart'],
     },
     combineReducers({
       products: productReducer,
       cart: cartReducer,
       filter: filterReducer,
-      auth: authReducer,
+      auth: persistReducer(authPersistConfig, authReducer),
       blogs: blogReducer,
       comments: commentReducer,
     })

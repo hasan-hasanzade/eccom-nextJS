@@ -10,7 +10,6 @@ import { useSelector } from 'react-redux';
 import { useForm } from 'react-hook-form';
 import { useAppDispatch } from '../../redux/store';
 import { selectIsAuth, selectorUserImg } from '../../redux/auth/selectors';
-// import { setUserImageUrl } from '../../redux/auth/slice';
 import { fetchRegister, uploadImage, deleteImage } from '../../redux/auth/asyncActions';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
@@ -187,7 +186,6 @@ export default function Register() {
             </>
           ) : (
             <>
-              {/* <img onClick={() => inputFileRef.current?.click()} src={user} alt="user" className={styles.noUser} /> */}
               <p onClick={() => inputFileRef.current?.click()} className={styles.noUser}>
                 <FcAddImage size={55} />{' '}
               </p>
