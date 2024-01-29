@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import React from 'react';
 import styles from './herosection.module.scss';
@@ -6,7 +6,6 @@ import { BsFillArrowRightCircleFill } from 'react-icons/bs';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-
 
 export default function HeroSection() {
   const textAnimation = {
@@ -46,9 +45,16 @@ export default function HeroSection() {
           </div>
         </div>
         <div className={`${styles.image} ${styles._ibg}`}>
-          <Image src='/img/hero/bg.png' alt="cover" priority fill/>
+          <Image
+            src="/img/hero/bg.png"
+            alt="background image"
+            width={1903}
+            height={900}
+            quality={100}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 100vw"
+          />
         </div>
       </motion.section>
     </>
   );
-};
+}

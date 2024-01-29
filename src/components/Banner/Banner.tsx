@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import React from 'react';
 import styles from './banner.module.scss';
@@ -46,7 +46,14 @@ export default function Banner() {
               </div>
             </div>
             <div className={styles.banner}>
-              <Image src='/img/hero/fruits.png' alt="fruit" width={683} height={367}/>
+              <Image
+                src="/img/hero/fruits.png"
+                alt="fruit"
+                width={665}
+                height={367}
+                quality={80}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 100vw"
+              />
             </div>
           </motion.div>
         </Link>
@@ -59,11 +66,18 @@ export default function Banner() {
               </div>
             </div>
             <div className={styles.vbanner}>
-              <Image src='/img/hero/veget.png' alt="vegetables" width={683} height={367} />
+              <Image
+                src="/img/hero/veget.png"
+                alt="vegetables"
+                width={665}
+                height={367}
+                quality={80}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 100vw"
+              />
             </div>
           </motion.div>
         </Link>
       </div>
     </motion.div>
   );
-};
+}
