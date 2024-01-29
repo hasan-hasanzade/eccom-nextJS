@@ -123,7 +123,7 @@ export default function Testimonials() {
                     width={116}
                     height={115}
                     quality={100}
-                    sizes="(min-width: 1460px) 665px, (min-width: 780px) calc(44.85vw + 19px), (min-width: 740px) 665px, 94.05vw"
+                    sizes="115px"
                   />
                 </div>
                 <div className={styles.rating}>
@@ -145,7 +145,7 @@ export default function Testimonials() {
                     width={115}
                     height={115}
                     quality={100}
-                    sizes="(min-width: 1460px) 665px, (min-width: 780px) calc(44.85vw + 19px), (min-width: 740px) 665px, 94.05vw"
+                    sizes="115px"
                   />
                 </div>
                 <div className={styles.rating}>
@@ -166,7 +166,7 @@ export default function Testimonials() {
                     width={115}
                     height={115}
                     quality={100}
-                    sizes="(min-width: 1460px) 665px, (min-width: 780px) calc(44.85vw + 19px), (min-width: 740px) 665px, 94.05vw"
+                    sizes="115px"
                   />
                 </div>
                 <div className={styles.rating}>
@@ -252,7 +252,7 @@ export default function Testimonials() {
           height={1107}
           quality={100}
           priority={false}
-          sizes="(min-width: 1460px) 665px, (min-width: 780px) calc(44.85vw + 19px), (min-width: 740px) 665px, 94.05vw"
+          sizes="100vw"
         />
       </div>
     </motion.section>

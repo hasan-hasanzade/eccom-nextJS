@@ -33,8 +33,17 @@
 }
 
 .image {
+  @media (max-width: $tablet) {
+    width: 100%;
+  }
   img {
-    max-width: 100%;
+    width: inherit;
+    @media (max-width: $mobile) {
+    height: 70vh;
+    }
+    @media (max-width: $mobileSmall) {
+      height: 50vh;
+      }
   }
 }
 
@@ -243,7 +252,14 @@
   img {
     max-width: 100%;
     border-radius: 30px;
+    @media (max-width: $mobile) {
+      height: 70vh;
+    }
+    @media (max-width: $mobileSmall) {
+      height: 50vh;
+    }
   }
+  
 }
 
 .cards {
@@ -338,6 +354,7 @@
   img {
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
+    
   }
 }
 

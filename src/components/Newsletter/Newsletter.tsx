@@ -44,16 +44,22 @@ export default function Newsletter() {
             </motion.div>
             <motion.div custom={1} variants={rightAnimation} className={styles.actions}>
               <input className={styles.input_news} placeholder="Your Email Address" type="text" />
-              <div className={styles.button}>
-                Subscribe
-              </div>
+              <div className={styles.button}>Subscribe</div>
             </motion.div>
           </div>
           <div className={`${styles.image} ${styles._ibg}`}>
-            <Image src='/img/news/bgnews.png' alt="background" width={1400} height={323}/>
+            <Image
+              src="/img/news/bgnews.png"
+              alt="background"
+              width={1350}
+              height={337}
+              quality={100}
+              sizes="(min-width: 1440px) 733px, (min-width: 1000px) calc(46.19vw + 77px), (min-width: 820px) 733px, 92.6vw"
+              priority={false}
+            />
           </div>
         </div>
       </div>
     </motion.section>
   );
-};
+}

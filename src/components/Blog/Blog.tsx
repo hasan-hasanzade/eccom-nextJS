@@ -18,13 +18,18 @@ type BlogProps = {
 
 export const Blog: React.FC<BlogProps> = forwardRef(
   ({ title, imageUrl, author, text, date, month, _id }, ref: Ref<HTMLDivElement>) => {
-
-
     return (
       <div ref={ref} className={styles.card}>
         <div className={styles.picture}>
-          
-            <Image className={styles.cardimg} src={imageUrl} alt="Blog" width={1920} height={480}/>
+          <Image
+            className={styles.cardimg}
+            src={imageUrl}
+            alt="Blog"
+            width={649}
+            height={480}
+            quality={100}
+            sizes="(min-width: 1440px) 733px, (min-width: 1000px) calc(46.19vw + 77px), (min-width: 820px) 733px, 92.6vw"
+          />
 
           <div className={styles.circle}>
             <span>{date}</span>

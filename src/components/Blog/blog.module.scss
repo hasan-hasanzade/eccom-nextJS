@@ -19,6 +19,12 @@
   border-top-right-radius: 30px;
 
   max-width: 100%;
+  @media (max-width: $mobile) {
+    height: 50vh;
+  }
+  @media (max-width: $mobileSmall) {
+    height: 35vh;
+  }
 }
 
 .cardImgLoad {
@@ -133,11 +139,3 @@
     font-size: rem(15);
   }
 }
-
-// .month {
-//   width: 55px;
-//   letter-spacing: 1px;
-//   white-space: nowrap; /* Prevent text from wrapping to the next line */
-//   overflow: hidden; /* Hide the overflow of the text */
-//   // text-overflow: ellipsis;
-// }
