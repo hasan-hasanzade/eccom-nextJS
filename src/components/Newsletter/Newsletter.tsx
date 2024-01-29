@@ -54,8 +54,8 @@ export default function Newsletter() {
               width={1350}
               height={337}
               quality={100}
-              sizes="(min-width: 1440px) 733px, (min-width: 1000px) calc(46.19vw + 77px), (min-width: 820px) 733px, 92.6vw"
-              priority={false}
+              sizes="(min-width: 1460px) 1350px, 94.74vw"
+              priority
             />
           </div>
         </div>

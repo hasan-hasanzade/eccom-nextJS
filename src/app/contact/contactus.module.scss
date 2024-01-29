@@ -15,7 +15,7 @@
 
 .body {
   display: grid;
-  grid-template-columns: percent(650, 1300) 1fr;
+  grid-template-columns: percent(650, 1500) 1fr;
   align-items: center;
   @media (max-width: $tablet) {
     display: flex;
@@ -55,18 +55,22 @@
 }
 
 @media (max-width: $mobileSmall) {
-  .subtitle {
-    font-size: rem(28);
-  }
   .title {
     font-size: rem(26);
   }
 }
 
 .image {
+  width: 100%;
   img {
     border-radius: 20px;
-    max-width: 100%;
+    width: inherit;
+    @media (max-width: $mobile) {
+      height: 70vh;
+    }
+    @media (max-width: $mobileSmall) {
+      height: 50vh;
+    }
   }
   @media (max-width: $tablet) {
     margin-bottom: 30px;

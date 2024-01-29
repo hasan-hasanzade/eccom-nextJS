@@ -18,7 +18,7 @@ export const PageBanner: React.FC<PageBannerProps> = ({ title, img }) => {
           width={1903}
           height={445}
           quality={100}
-          sizes="(min-width: 1440px) 733px, (min-width: 1000px) calc(46.19vw + 77px), (min-width: 820px) 733px, 92.6vw"
+          sizes="100vw"
         />
       </div>
     </section>

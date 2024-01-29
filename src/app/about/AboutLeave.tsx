@@ -52,7 +52,7 @@ export default function AboutLeave() {
                 width={675}
                 height={466}
                 quality={100}
-                sizes="(min-width: 1440px) 733px, (min-width: 1000px) calc(46.19vw + 77px), (min-width: 820px) 733px, 92.6vw"
+                sizes="(min-width: 1000px) 556px, calc(100vw - 30px)"
               />
             </motion.div>
             <div className={styles.content}>
@@ -159,7 +159,7 @@ export default function AboutLeave() {
                 width={678}
                 height={580}
                 quality={100}
-                sizes="(min-width: 1440px) 733px, (min-width: 1000px) calc(46.19vw + 77px), (min-width: 820px) 733px, 92.6vw"
+                sizes="(min-width: 1480px) 623px, (min-width: 1000px) calc(38.04vw + 68px), (min-width: 760px) 678px, 92.73vw"
               />
             </motion.div>
           </div>
@@ -225,7 +225,14 @@ export default function AboutLeave() {
           <motion.div custom={2} variants={textAnimation} className={styles.team_cards}>
             <div className={styles.team_card}>
               <div className={`${styles.team_img} ${styles._ibg}`}>
-                <Image src="/img/about-page/giovani.jpg" alt="Giovanni" width={429} height={423} quality={80} sizes="(min-width: 1440px) 733px, (min-width: 1000px) calc(46.19vw + 77px), (min-width: 820px) 733px, 92.6vw"/>
+                <Image
+                  src="/img/about-page/giovani.jpg"
+                  alt="Giovanni"
+                  width={429}
+                  height={423}
+                  quality={80}
+                  sizes="(min-width: 1460px) 429px, (min-width: 1020px) calc(28.57vw + 18px), (min-width: 680px) calc(50vw - 31px), (min-width: 380px) calc(100vw - 30px), calc(41.67vw + 180px)"
+                />
               </div>
               <div className={styles.bottom}>
                 <div className={styles.desc}>
@@ -247,7 +254,14 @@ export default function AboutLeave() {
             </div>
             <div className={styles.team_card}>
               <div className={`${styles.team_img} ${styles._ibg}`}>
-                <Image src="/img/about-page/maria.jpg" alt="Giovanni" width={429} height={423} quality={80} sizes="(min-width: 1440px) 733px, (min-width: 1000px) calc(46.19vw + 77px), (min-width: 820px) 733px, 92.6vw"/>
+                <Image
+                  src="/img/about-page/maria.jpg"
+                  alt="Maria"
+                  width={429}
+                  height={423}
+                  quality={80}
+                  sizes="(min-width: 1460px) 429px, (min-width: 1020px) calc(28.57vw + 18px), (min-width: 680px) calc(50vw - 31px), (min-width: 380px) calc(100vw - 30px), calc(41.67vw + 180px)"
+                />
               </div>
               <div className={styles.bottom}>
                 <div className={styles.desc}>
@@ -269,7 +283,14 @@ export default function AboutLeave() {
             </div>
             <div className={styles.team_card}>
               <div className={`${styles.team_img} ${styles._ibg}`}>
-                <Image src="/img/about-page/riga.jpg" alt="Giovanni" width={429} height={423} quality={80} sizes="(min-width: 1440px) 733px, (min-width: 1000px) calc(46.19vw + 77px), (min-width: 820px) 733px, 92.6vw"/>
+                <Image
+                  src="/img/about-page/riga.jpg"
+                  alt="Angelina"
+                  width={429}
+                  height={423}
+                  quality={80}
+                  sizes="(min-width: 1460px) 429px, (min-width: 1020px) calc(28.57vw + 18px), (min-width: 680px) calc(50vw - 31px), (min-width: 380px) calc(100vw - 30px), calc(41.67vw + 180px)"
+                />
               </div>
               <div className={styles.bottom}>
                 <div className={styles.desc}>
