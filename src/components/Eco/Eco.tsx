@@ -31,7 +31,7 @@ export default function Eco() {
             width={952}
             height={931}
             quality={100}
-            // sizes="(min-width: 1460px) 665px, (min-width: 780px) calc(44.85vw + 19px), (min-width: 740px) 665px, 94.05vw"
+            sizes="(min-width: 1460px) 665px, (min-width: 780px) calc(44.85vw + 19px), (min-width: 740px) 665px, 94.05vw"
           />
         </div>
         <div className={styles.body}>

@@ -36,7 +36,7 @@ export default function About() {
                 width={733}
                 quality={100}
                 height={697}
-                // sizes="(min-width: 1460px) 665px, (min-width: 780px) calc(44.85vw + 19px), (min-width: 740px) 665px, 94.05vw"
+                sizes="(min-width: 1460px) 665px, (min-width: 780px) calc(44.85vw + 19px), (min-width: 740px) 665px, 94.05vw"
               />
             </motion.div>
             <div className={styles.body}>
