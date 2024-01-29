@@ -52,7 +52,7 @@ export default function Banner() {
                 width={665}
                 height={367}
                 quality={80}
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 100vw"
+                sizes="(min-width: 1460px) 665px, (min-width: 780px) calc(44.85vw + 19px), (min-width: 740px) 665px, 94.05vw"
               />
             </div>
           </motion.div>
@@ -72,7 +72,7 @@ export default function Banner() {
                 width={665}
                 height={367}
                 quality={80}
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 100vw"
+                sizes="(min-width: 1460px) 665px, (min-width: 780px) 46.06vw, (min-width: 740px) 665px, 94.05vw"
               />
             </div>
           </motion.div>

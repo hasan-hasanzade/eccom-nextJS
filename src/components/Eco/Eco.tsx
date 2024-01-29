@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import React from 'react';
 import styles from './eco.module.scss';
@@ -25,7 +25,14 @@ export default function Eco() {
       className={styles.eco}>
       <div className={styles.wrapper}>
         <div className={styles.image}>
-          <Image src='/img/eco/bgeco.jpg' alt="background" width={952} height={931}/>
+          <Image
+            src="/img/eco/bgeco.jpg"
+            alt="background"
+            width={952}
+            height={931}
+            quality={100}
+            // sizes="(min-width: 1460px) 665px, (min-width: 780px) calc(44.85vw + 19px), (min-width: 740px) 665px, 94.05vw"
+          />
         </div>
         <div className={styles.body}>
           <div className={styles.inner}>
@@ -63,4 +70,4 @@ export default function Eco() {
       </div>
     </motion.section>
   );
-};
+}

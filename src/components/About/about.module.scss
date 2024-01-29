@@ -35,6 +35,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  @media (max-width: $mobileSmall) {
+    width: 70px;
+    height: 70px;
+  }
+
 }
 
 .block {
@@ -165,6 +170,10 @@
 .image {
   img {
     max-width: 100%;
+    @media (max-width: $mobileSmall) {
+      height: 50vh;
+    }
+
   }
 }
 
@@ -188,7 +197,7 @@
 
 .wrapper {
   display: grid;
-  grid-template-columns: percent(611, 1300) 1fr;
+  grid-template-columns: percent(611, 1100) 1fr;
   align-items: center;
   @media (max-width: $tablet) {
     display: flex;

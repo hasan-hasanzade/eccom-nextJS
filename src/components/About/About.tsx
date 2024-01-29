@@ -1,5 +1,4 @@
-
-'use client'
+'use client';
 
 import React from 'react';
 import styles from './about.module.scss';
@@ -31,7 +30,14 @@ export default function About() {
         <div className="container">
           <div className={styles.wrapper}>
             <motion.div custom={1} variants={textAnimation} className={styles.image}>
-              <Image src='/img/about/citrus.png' alt="cover" width={733} quality={100} height={697}/>
+              <Image
+                src="/img/about/citrus.png"
+                alt="cover"
+                width={733}
+                quality={100}
+                height={697}
+                // sizes="(min-width: 1460px) 665px, (min-width: 780px) calc(44.85vw + 19px), (min-width: 740px) 665px, 94.05vw"
+              />
             </motion.div>
             <div className={styles.body}>
               <motion.h2 custom={2} variants={textAnimation} className={styles.subtitle}>
@@ -48,7 +54,7 @@ export default function About() {
               <motion.div custom={3} variants={textAnimation} className={styles.content}>
                 <div className={styles.icon}>
                   <div className={styles.block}>
-                    <img src='/img/about/vegan.svg' alt="vegan" width={50} height={50}/>
+                    <img src="/img/about/vegan.svg" alt="vegan" width={50} height={50} />
                   </div>
                 </div>
                 <div className={styles.item}>
@@ -62,7 +68,7 @@ export default function About() {
               <motion.div custom={4} variants={textAnimation} className={styles.content}>
                 <div className={styles.icon}>
                   <div className={styles.mblock}>
-                    <Image src='/img/about/mailbox.svg' alt="vegan" width={50} height={50}/>
+                    <Image src="/img/about/mailbox.svg" alt="vegan" width={50} height={50} />
                   </div>
                 </div>
                 <div className={styles.item}>
@@ -89,4 +95,4 @@ export default function About() {
       </motion.section>
     </>
   );
-};
+}

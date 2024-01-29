@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import React from 'react';
 import Image from 'next/image';
@@ -117,7 +117,14 @@ export default function Testimonials() {
             <Slider {...settings}>
               <div className={styles.item}>
                 <div className={styles.user}>
-                  <Image src='/img/testimonial/sara.png' alt="consumer" width={116} height={115}/>
+                  <Image
+                    src="/img/testimonial/sara.png"
+                    alt="consumer"
+                    width={116}
+                    height={115}
+                    quality={100}
+                    // sizes="(min-width: 1460px) 665px, (min-width: 780px) calc(44.85vw + 19px), (min-width: 740px) 665px, 94.05vw"
+                  />
                 </div>
                 <div className={styles.rating}>
                   <Rating name="read-only" defaultValue={5} precision={0.5} readOnly />
@@ -132,7 +139,14 @@ export default function Testimonials() {
               </div>
               <div className={styles.item}>
                 <div className={styles.user}>
-                  <Image src='/img/testimonial/chris.jpg' alt="consumer" width={115} height={115}/>
+                  <Image
+                    src="/img/testimonial/chris.jpg"
+                    alt="consumer"
+                    width={115}
+                    height={115}
+                    quality={100}
+                    // sizes="(min-width: 1460px) 665px, (min-width: 780px) calc(44.85vw + 19px), (min-width: 740px) 665px, 94.05vw"
+                  />
                 </div>
                 <div className={styles.rating}>
                   <Rating name="read-only" defaultValue={5} precision={0.5} readOnly />
@@ -146,7 +160,14 @@ export default function Testimonials() {
               </div>
               <div className={styles.item}>
                 <div className={styles.user}>
-                  <Image src='/img/testimonial/jenny.jpg' alt="consumer" width={256} height={256}/>
+                  <Image
+                    src="/img/testimonial/jenny.jpg"
+                    alt="consumer"
+                    width={115}
+                    height={115}
+                    quality={100}
+                    // sizes="(min-width: 1460px) 665px, (min-width: 780px) calc(44.85vw + 19px), (min-width: 740px) 665px, 94.05vw"
+                  />
                 </div>
                 <div className={styles.rating}>
                   <Rating name="read-only" defaultValue={5} precision={0.5} readOnly />
@@ -224,8 +245,16 @@ export default function Testimonials() {
         </div>
       </div>
       <div className={`${styles.image} ${styles._ibg}`}>
-        <Image src='/img/testimonial/bgtest.png' alt="Background Image" width={1920} height={1267}/>
+        <Image
+          src="/img/testimonial/bgtest.png"
+          alt="Background Image"
+          width={1903}
+          height={1107}
+          quality={100}
+          priority={false}
+          // sizes="(min-width: 1460px) 665px, (min-width: 780px) calc(44.85vw + 19px), (min-width: 740px) 665px, 94.05vw"
+        />
       </div>
     </motion.section>
   );
-};
+}

@@ -51,7 +51,7 @@ export default function HeroSection() {
             width={1903}
             height={900}
             quality={100}
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 100vw"
+            sizes="100vw"
           />
         </div>
       </motion.section>
