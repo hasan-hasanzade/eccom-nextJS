@@ -38,7 +38,7 @@ export default function Services() {
             <div className={styles.left_items}>
               <motion.div custom={3} variants={textAnimation} className={styles.item}>
                 <div className={styles.leftImg}>
-                  <Image src='/img/services/Milk-Bottle.png' alt="milk bottle" width={56} height={56}/>
+                  <Image src='/img/services/Milk-Bottle.png' alt="milk bottle" width={56} height={56} quality={100}/>
                 </div>
                 <div className={styles.desc}>
                   <h5>Dairy Products</h5>
@@ -50,7 +50,7 @@ export default function Services() {
               </motion.div>
               <motion.div custom={4} variants={textAnimation} className={styles.item}>
                 <div className={styles.leftImg}>
-                  <Image src='/img/services/Online-Store.png' alt="online store" width={56} height={56}/>
+                  <Image src='/img/services/Online-Store.png' alt="online store" width={56} height={56} quality={100}/>
                 </div>
                 <div className={styles.desc}>
                   <h5>Store Services</h5>
@@ -62,7 +62,7 @@ export default function Services() {
               </motion.div>
               <motion.div custom={5} variants={textAnimation} className={styles.item}>
                 <div className={styles.leftImg}>
-                  <Image src='/img/services/Delivery.png' alt="delivery" width={56} height={56}/>
+                  <Image src='/img/services/Delivery.png' alt="delivery" width={56} height={56} quality={100}/>
                 </div>
                 <div className={styles.desc}>
                   <h5>Delivery Services</h5>
@@ -74,12 +74,12 @@ export default function Services() {
               </motion.div>
             </div>
             <motion.div custom={2} variants={textAnimation} className={styles.center}>
-              <Image src='/img/services/snack.jpg' alt="Snack" width={1920} height={960}/>
+              <Image src='/img/services/snack.jpg' alt="Snack" width={1920} height={960} quality={100} sizes='100vw'/>
             </motion.div>
             <div className={styles.right_items}>
               <motion.div custom={6} variants={textAnimation} className={styles.item}>
                 <div className={styles.right_img}>
-                  <Image src='/img/services/Natural-Food.png' alt="natural food" width={56} height={56}/>
+                  <Image src='/img/services/Natural-Food.png' alt="natural food" width={56} height={56} quality={100}/>
                 </div>
                 <div className={styles.desc}>
                   <h5>Agricultural Services</h5>
@@ -91,7 +91,7 @@ export default function Services() {
               </motion.div>
               <motion.div custom={7} variants={textAnimation} className={styles.item}>
                 <div className={styles.right_img}>
-                  <Image src='/img/services/Vegetables-Bag.png' alt="Vegetable"  width={56} height={56}/>
+                  <Image src='/img/services/Vegetables-Bag.png' alt="Vegetable"  width={56} height={56} quality={100}/>
                 </div>
                 <div className={styles.desc}>
                   <h5>Organic Products</h5>
@@ -103,7 +103,7 @@ export default function Services() {
               </motion.div>
               <motion.div custom={8} variants={textAnimation} className={styles.item}>
                 <div className={styles.right_img}>
-                  <Image src='/img/services/Radish.png' alt="Radish" width={56} height={56} />
+                  <Image src='/img/services/Radish.png' alt="Radish" width={56} height={56} quality={100} />
                 </div>
                 <div className={styles.desc}>
                   <h5>Fresh Vegetables</h5>
@@ -132,7 +132,7 @@ export default function Services() {
           </p>
         </motion.div>
         <div className={`${styles.videobg} ${styles._ibg}`}>
-          <Image src='/img/services/bgvideo.jpg' alt="Background Image" width={1920} height={1073}/>
+          <Image src='/img/services/bgvideo.jpg' alt="Background Image" width={1920} height={1073} quality={100} sizes='100vw'/>
         </div>
 
         <motion.div custom={2} variants={textAnimation} className={styles.button}>

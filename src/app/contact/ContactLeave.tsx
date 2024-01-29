@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import React from 'react';
 import styles from './contactus.module.scss';
@@ -32,7 +32,14 @@ export default function ContactUs() {
         <div className="container">
           <div className={styles.body}>
             <motion.div custom={1} variants={textAnimation} className={styles.image}>
-              <Image src='/img/contact-page/fruits.jpg' alt="Fruits" width={623} height={640} quality={100} sizes="(min-width: 1460px) 429px, (min-width: 1020px) calc(28.57vw + 18px), (min-width: 680px) calc(50vw - 31px), (min-width: 380px) calc(100vw - 30px), calc(41.67vw + 180px)"/>
+              <Image
+                src="/img/contact-page/fruits.jpg"
+                alt="Fruits"
+                width={623}
+                height={640}
+                quality={100}
+                sizes="(min-width: 1480px) 585px, (min-width: 1000px) calc(35.87vw + 61px), calc(100vw - 30px)"
+              />
             </motion.div>
             <div className={styles.content}>
               <motion.div custom={2} variants={textAnimation} className={styles.heading}>
@@ -47,7 +54,13 @@ export default function ContactUs() {
               <div className={styles.items}>
                 <motion.div custom={4} variants={textAnimation} className={styles.item}>
                   <div className={styles.img}>
-                    <Image src='/img/contact-page/icon1.svg' alt="Contact Image" width={35} height={35} quality={100}/>
+                    <Image
+                      src="/img/contact-page/icon1.svg"
+                      alt="Contact Image"
+                      width={35}
+                      height={35}
+                      quality={100}
+                    />
                   </div>
                   <div className={styles.desc}>
                     <h5>Message</h5>
@@ -56,7 +69,13 @@ export default function ContactUs() {
                 </motion.div>
                 <motion.div custom={5} variants={textAnimation} className={styles.item}>
                   <div className={styles.img}>
-                    <Image src='/img/contact-page/icon2.svg' alt="Phone Image" width={35} height={35} quality={100}/>
+                    <Image
+                      src="/img/contact-page/icon2.svg"
+                      alt="Phone Image"
+                      width={35}
+                      height={35}
+                      quality={100}
+                    />
                   </div>
                   <div className={styles.desc}>
                     <h5>Contact Us</h5>
@@ -66,16 +85,40 @@ export default function ContactUs() {
               </div>
               <motion.div custom={6} variants={textAnimation} className={styles.social}>
                 <a href="https.instagram.com">
-                  <Image src='/img/footer/inst.png' alt="instagram" width={60} height={60} quality={100}/>
+                  <Image
+                    src="/img/footer/inst.png"
+                    alt="instagram"
+                    width={60}
+                    height={60}
+                    quality={100}
+                  />
                 </a>
                 <a href="https.facebook.com">
-                  <Image src='/img/footer/fb.png' alt="facebook" width={60} height={60} quality={100}/>
+                  <Image
+                    src="/img/footer/fb.png"
+                    alt="facebook"
+                    width={60}
+                    height={60}
+                    quality={100}
+                  />
                 </a>
                 <a href="https.twitter.com">
-                  <Image src='/img/footer/tw.png' alt="twitter" width={60} height={60} quality={100}/>
+                  <Image
+                    src="/img/footer/tw.png"
+                    alt="twitter"
+                    width={60}
+                    height={60}
+                    quality={100}
+                  />
                 </a>
                 <a href="https.printerest.com">
-                  <Image src='/img/footer/pr.png' alt="instagram" width={60} height={60} quality={100}/>
+                  <Image
+                    src="/img/footer/pr.png"
+                    alt="instagram"
+                    width={60}
+                    height={60}
+                    quality={100}
+                  />
                 </a>
               </motion.div>
             </div>
@@ -104,7 +147,12 @@ export default function ContactUs() {
                 <div className={styles.loc_items}>
                   <div className={styles.loc_item}>
                     <div className={styles.loc_img}>
-                      <Image src='/img/contact-page/icon3.svg' alt="Location Image" width={35} height={35}/>
+                      <Image
+                        src="/img/contact-page/icon3.svg"
+                        alt="Location Image"
+                        width={35}
+                        height={35}
+                      />
                     </div>
                     <div className={styles.loc_desc}>
                       <h5>New York, USA:</h5>
@@ -116,7 +164,12 @@ export default function ContactUs() {
                   </div>
                   <div className={styles.loc_item}>
                     <div className={styles.loc_img}>
-                      <Image src='/img/contact-page/icon3.svg' alt="Location Image" width={35} height={35}/>
+                      <Image
+                        src="/img/contact-page/icon3.svg"
+                        alt="Location Image"
+                        width={35}
+                        height={35}
+                      />
                     </div>
                     <div className={styles.loc_desc}>
                       <h5>London, UK:</h5>
@@ -198,4 +251,4 @@ export default function ContactUs() {
       <Newsletter />
     </>
   );
-};
+}

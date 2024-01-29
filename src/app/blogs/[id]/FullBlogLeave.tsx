@@ -36,7 +36,7 @@ export default function FullBlog({ params: { id } }: PropsId) {
     <>
       <section className={styles.image}>
         <div className={styles.img}>
-          <Image src={imageUrl} alt="" width={1080} height={720} quality={100} sizes="(min-width: 1460px) 429px, (min-width: 1020px) calc(28.57vw + 18px), (min-width: 680px) calc(50vw - 31px), (min-width: 380px) calc(100vw - 30px), calc(41.67vw + 180px)"/>
+          <Image src={imageUrl} alt="" width={1080} height={720} quality={100}/>
         </div>
       </section>
       <section className={styles.content}>

@@ -42,7 +42,7 @@ export default function OurTeam() {
           <motion.div custom={2} variants={textAnimation} className={styles.team_cards}>
             <div className={styles.team_card}>
               <div className={`${styles.team_img} ${styles._ibg}`}>
-                <Image src='/img/about-page/giovani.jpg' alt="Giovanni" width={449} height={485}/>
+                <Image src='/img/about-page/giovani.jpg' alt="Giovanni" width={409} height={403} quality={100} sizes="(min-width: 1460px) 429px, (min-width: 1020px) calc(28.57vw + 18px), (min-width: 680px) calc(50vw - 31px), (min-width: 380px) calc(100vw - 30px), calc(41.67vw + 180px)"/>
               </div>
               <div className={styles.bottom}>
                 <div className={styles.desc}>
@@ -64,7 +64,7 @@ export default function OurTeam() {
             </div>
             <div className={styles.team_card}>
               <div className={`${styles.team_img} ${styles._ibg}`}>
-                <Image src='/img/about-page/maria.jpg' alt="Maria" width={449} height={485}/>
+                <Image src='/img/about-page/maria.jpg' alt="Maria" width={409} height={403} quality={100} sizes="(min-width: 1460px) 429px, (min-width: 1020px) calc(28.57vw + 18px), (min-width: 680px) calc(50vw - 31px), (min-width: 380px) calc(100vw - 30px), calc(41.67vw + 180px)"/>
               </div>
               <div className={styles.bottom}>
                 <div className={styles.desc}>
@@ -86,7 +86,7 @@ export default function OurTeam() {
             </div>
             <div className={styles.team_card}>
               <div className={`${styles.team_img} ${styles._ibg}`}>
-                <Image src='/img/about-page/riga.jpg' alt="Riga" width={449} height={485}/>
+                <Image src='/img/about-page/riga.jpg' alt="Riga" width={409} height={403} quality={100} sizes="(min-width: 1460px) 429px, (min-width: 1020px) calc(28.57vw + 18px), (min-width: 680px) calc(50vw - 31px), (min-width: 380px) calc(100vw - 30px), calc(41.67vw + 180px)"/>
               </div>
               <div className={styles.bottom}>
                 <div className={styles.desc}>
@@ -108,7 +108,7 @@ export default function OurTeam() {
             </div>
             <div className={styles.team_card}>
               <div className={`${styles.team_img} ${styles._ibg}`}>
-                <Image src='/img/team-page/keira.jpg' alt="Giovanni" width={449} height={485}/>
+                <Image src='/img/team-page/keira.jpg' alt="Giovanni" width={409} height={403} quality={100}/>
               </div>
               <div className={styles.bottom}>
                 <div className={styles.desc}>
@@ -130,7 +130,7 @@ export default function OurTeam() {
             </div>
             <div className={styles.team_card}>
               <div className={`${styles.team_img} ${styles._ibg}`}>
-                <Image src='/img/team-page/scott.jpg' alt="Scott" width={449} height={485}/>
+                <Image src='/img/team-page/scott.jpg' alt="Scott" width={409} height={403} quality={100}/>
               </div>
               <div className={styles.bottom}>
                 <div className={styles.desc}>
@@ -152,7 +152,7 @@ export default function OurTeam() {
             </div>
             <div className={styles.team_card}>
               <div className={`${styles.team_img} ${styles._ibg}`}>
-                <Image src='/img/team-page/karen.jpg' alt="Karen" width={449} height={485}/>
+                <Image src='/img/team-page/karen.jpg' alt="Karen" width={409} height={403} quality={100}/>
               </div>
               <div className={styles.bottom}>
                 <div className={styles.desc}>

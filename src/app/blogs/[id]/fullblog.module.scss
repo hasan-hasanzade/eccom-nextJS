@@ -8,14 +8,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  @media (max-width: $tablet) {
+    margin-top: 100px;
+  }
   img {
     object-fit: cover;
     position: relative;
     z-index: -1;
     @media (max-width: $mobile) {
-      object-fit: none;
+      // object-fit: none;
       max-width: 100%;
       z-index: 1;
+      height: 70vh;
+    }
+    @media (max-width: $mobileSmall) {
+      height: 50vh;
     }
   }
 }
