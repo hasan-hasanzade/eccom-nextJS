@@ -60,6 +60,9 @@
   font-size: rem(30);
   line-height: calc(36 / 30 * 100%);
   margin-bottom: 20px;
+  @media (max-width: $mobile) {
+    font-size: rem(25);
+  }
 }
 
 .heading {
@@ -113,6 +116,9 @@
   font-weight: 700;
   line-height: calc(44 / 38 * 100%);
   margin-left: 10px;
+  @media (max-width: $mobile) {
+    font-size: 33px;
+  } 
 }
 
 .desc {
@@ -130,6 +136,12 @@
   a {
     &:not(:first-child) {
       margin-left: 10px;
+    }
+    @media (max-width: $mobile) {
+      img {
+        width: 45px;
+        height: 45px;
+      }
     }
   }
 }

@@ -74,7 +74,7 @@ export default function Services() {
               </motion.div>
             </div>
             <motion.div custom={2} variants={textAnimation} className={styles.center}>
-              <Image src='/img/services/snack.jpg' alt="Snack" width={1920} height={960} quality={100} sizes='100vw'/>
+              <Image src='/img/services/snack.jpg' alt="Snack" width={1920} height={960} quality={100} sizes="(min-width: 1480px) 687px, calc(41.96vw + 74px)"/>
             </motion.div>
             <div className={styles.right_items}>
               <motion.div custom={6} variants={textAnimation} className={styles.item}>

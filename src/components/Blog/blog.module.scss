@@ -19,7 +19,7 @@
   border-top-right-radius: 30px;
 
   max-width: 100%;
-  @media (max-width: $mobile) {
+  @media (max-width: $tablet) {
     height: 50vh;
   }
   @media (max-width: $mobileSmall) {

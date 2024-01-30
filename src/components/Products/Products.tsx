@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import React from 'react';
 import styles from './products.module.scss';
@@ -8,6 +8,7 @@ import { useAppDispatch } from '../../redux/store';
 import { productSelector } from '../../redux/product/selectors';
 import { fetchProducts } from '../../redux/product/asyncActions';
 import { motion } from 'framer-motion';
+import Loading from '@/app/loading';
 
 export default function Products() {
   const items = useSelector(productSelector);
@@ -34,7 +35,6 @@ export default function Products() {
     }),
   };
 
-
   return (
     <motion.section
       initial="hidden"
@@ -48,22 +48,24 @@ export default function Products() {
         <motion.div custom={1} variants={textAnimation} className={styles.subtitle}>
           Our Products
         </motion.div>
-        <motion.div
-          custom={2} variants={textAnimation}
-          className={styles.body}>
-          {items.slice(8, 16).map((obj: any) => (
-            <ProductCard
-              key={obj._id}
-              rating={obj.rating}
-              _id={obj._id}
-              category={obj.category}
-              imageUrl={obj.imageUrl}
-              title={obj.title}
-              price={obj.price}
-            />
-          ))}
-        </motion.div>
+        {items.length !== 0 ? (
+          <motion.div custom={2} variants={textAnimation} className={styles.body}>
+            {items.slice(8, 16).map((obj: any) => (
+              <ProductCard
+                key={obj._id}
+                rating={obj.rating}
+                _id={obj._id}
+                category={obj.category}
+                imageUrl={obj.imageUrl}
+                title={obj.title}
+                price={obj.price}
+              />
+            ))}
+          </motion.div>
+        ) : (
+          <Loading />
+        )}
       </div>
     </motion.section>
   );
-};
+}

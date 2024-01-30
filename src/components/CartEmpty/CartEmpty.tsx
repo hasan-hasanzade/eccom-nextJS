@@ -11,7 +11,7 @@ type CartEmptyProps = {
 export const CartEmpty: React.FC<CartEmptyProps> = ({ onClose }) => {
   return (
     <div className={styles.content}>
-      <Image className={styles.image} src='/img/cart/empty-cart.png' alt="cart empty" width={200} height={200} quality={100} sizes='100vw'/>
+      <Image className={styles.image} src='/img/cart/empty-cart.png' alt="cart empty" width={200} height={200} quality={100} sizes="200px"/>
       <div className={styles.text}>
         You have no items in your cart. <br /> Let's go buy something!
       </div>
