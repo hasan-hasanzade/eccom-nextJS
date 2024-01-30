@@ -34,7 +34,9 @@ export const Cart: React.FC<CartProps> = ({ onClose, items, totalPrice, opened }
   };
 
   return (
-    <div className={`${styles.overlay} ${opened ? styles.overlayVisible : ''}`} onClick={overlayClickHandler}>
+    <div
+      className={`${styles.overlay} ${opened ? styles.overlayVisible : ''}`}
+      onClick={overlayClickHandler}>
       <div className={styles.drawer}>
         <div className={styles.inner}>
           <div className={styles.heading}>
@@ -55,11 +57,11 @@ export const Cart: React.FC<CartProps> = ({ onClose, items, totalPrice, opened }
               <div className={styles.text}>Subtotal:</div>
               <div className={styles.number}>${totalPrice}</div>
             </div>
-            <button onClick={onClickClear} className={styles.button}>
-              Clear Cart
-            </button>
             {totalPrice > 0 && (
               <>
+                <button onClick={onClickClear} className={styles.button}>
+                  Clear Cart
+                </button>
                 {isAuth ? (
                   <Link href="/checkout">
                     <button onClick={onClose} className={styles.btn}>
