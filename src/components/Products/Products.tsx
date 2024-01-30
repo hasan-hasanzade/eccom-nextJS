@@ -8,7 +8,7 @@ import { useAppDispatch } from '../../redux/store';
 import { productSelector } from '../../redux/product/selectors';
 import { fetchProducts } from '../../redux/product/asyncActions';
 import { motion } from 'framer-motion';
-import Loading from '@/app/loading';
+import Loading from './loading';
 
 export default function Products() {
   const items = useSelector(productSelector);
@@ -49,7 +49,7 @@ export default function Products() {
           Our Products
         </motion.div>
         {items.length !== 0 ? (
-          <motion.div custom={2} variants={textAnimation} className={styles.body}>
+          <div className={styles.body}>
             {items.slice(8, 16).map((obj: any) => (
               <ProductCard
                 key={obj._id}
@@ -61,7 +61,7 @@ export default function Products() {
                 price={obj.price}
               />
             ))}
-          </motion.div>
+          </div>
         ) : (
           <Loading />
         )}

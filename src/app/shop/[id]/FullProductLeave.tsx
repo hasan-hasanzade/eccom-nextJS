@@ -14,6 +14,7 @@ import { CartItem } from '@/redux/cart/types';
 import { singleProductSelector } from '@/redux/product/selectors';
 import { fetchSingleProduct } from '@/redux/product/asyncActions';
 import FullSkeleton from './FullSkeleton';
+import Loading from '@/app/loading';
 
 type PropsId = {
   params: {
@@ -38,12 +39,16 @@ export default function FullProduct({ params: { id } }: PropsId) {
     }
   }, [id]);
 
-  if (isLoading) {
-    return <FullSkeleton />;
+
+
+  if (window.innerWidth < 992) {
+    if (!data) {
+      return <Loading />;
+    }
   }
 
-  if (!data) {
-    return <div>Loading...</div>;
+  if (isLoading) {
+    return <FullSkeleton />;
   }
 
   const { _id, imageUrl, title, price, category, rating } = data;
@@ -97,7 +102,6 @@ export default function FullProduct({ params: { id } }: PropsId) {
                 <Rating name="half-rating-read" value={rating ?? ' '} precision={0.5} readOnly />
               </div>
               <div className={styles.prices}>
-                {/* <span className={styles.old}>${oldPrice}</span> */}
                 <span className={styles.price}>${price}</span>
               </div>
               <p className={styles.desc}>

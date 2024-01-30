@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import React from 'react';
 import styles from './offer.module.scss';
@@ -10,6 +10,7 @@ import { useAppDispatch } from '../../redux/store';
 import { productSelector } from '../../redux/product/selectors';
 import { fetchProducts } from '../../redux/product/asyncActions';
 import { motion } from 'framer-motion';
+import Loading from './loading';
 
 export default function Offer() {
   const items = useSelector(productSelector);
@@ -36,18 +37,6 @@ export default function Offer() {
     }),
   };
 
-  // const productAnimation = {
-  //   hidden: {
-  //     x: 0,
-  //     opacity: 0,
-  //   },
-  //   visible: (custom: number) => ({
-  //     x: 0,
-  //     opacity: 1,
-  //     transition: { type: 'tween', duration: 1, delay: custom * 0.5 },
-  //   }),
-  // };
-
   return (
     <motion.section
       initial="hidden"
@@ -71,22 +60,24 @@ export default function Offer() {
             </Link>
           </motion.div>
         </div>
-        <motion.div
-custom={3} variants={textAnimation}
-          className={styles.body}>
-          {items.slice(4, 8).map((obj: any) => (
-            <ProductCard
-              key={obj._id}
-              rating={obj.rating}
-              _id={obj._id}
-              category={obj.category}
-              imageUrl={obj.imageUrl}
-              title={obj.title}
-              price={obj.price}
-            />
-          ))}
-        </motion.div>
+        {items.length !== 0 ? (
+          <motion.div custom={3} variants={textAnimation} className={styles.body}>
+            {items.slice(4, 8).map((obj: any) => (
+              <ProductCard
+                key={obj._id}
+                rating={obj.rating}
+                _id={obj._id}
+                category={obj.category}
+                imageUrl={obj.imageUrl}
+                title={obj.title}
+                price={obj.price}
+              />
+            ))}
+          </motion.div>
+        ) : (
+          <Loading />
+        )}
       </div>
     </motion.section>
   );
-};
+}

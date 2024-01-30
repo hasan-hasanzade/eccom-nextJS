@@ -33,6 +33,9 @@
 
 .image {
   margin-top: 5px;
+  @media (max-width: $mobileSmall) {
+    margin-top: 0;
+  }
   img {
     width: 60px;
     height: 60px;
@@ -117,7 +120,8 @@
   padding: 15px 0 60px 15px;
   border-radius: 20px;
   @media (max-width: $mobileSmall) {
-    width: 80%;
+    width: 99%;
+    margin-left: 5px;
   }
 }
 

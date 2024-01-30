@@ -9,6 +9,7 @@ import { useSelector } from 'react-redux';
 import { blogItemSelector } from '../../../redux/blog/selectors';
 import { fetchSingleBlog } from '../../../redux/blog/asyncActions';
 import Image from 'next/image';
+import Loading from '@/app/loading';
 
 type PropsId = {
   params: {
@@ -27,7 +28,7 @@ export default function FullBlog({ params: { id } }: PropsId) {
   }, [id]);
 
   if (!data) {
-    return <div>Loading...</div>;
+    return <Loading />;
   }
 
   const { imageUrl, month, date, title, text, mainText, author } = data;
