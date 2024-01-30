@@ -3,8 +3,8 @@
 import React from 'react';
 import styles from './cart.module.scss';
 import { AiOutlineClose } from 'react-icons/ai';
-import { CartEmpty} from '@/components/CartEmpty/CartEmpty';
-import { CartItemBlock} from '@/components/CartItem/CartItemBlock';
+import { CartEmpty } from '@/components/CartEmpty/CartEmpty';
+import { CartItemBlock } from '@/components/CartItem/CartItemBlock';
 import { clearCart } from '../../redux/cart/slice';
 import { useSelector } from 'react-redux';
 import { useAppDispatch } from '../../redux/store';
@@ -52,14 +52,22 @@ export const Cart: React.FC<CartProps> = ({ onClose, items, totalPrice, opened }
             <button onClick={onClickClear} className={styles.button}>
               Clear Cart
             </button>
-            {isAuth ? (
-              <Link href="/checkout">
-                <button className={styles.btn}>Checkout</button>
-              </Link>
-            ) : (
-              <Link href="/login">
-                <button className={styles.btn}>Please Log in to checkout</button>
-              </Link>
+            {totalPrice > 0 && (
+              <>
+                {isAuth ? (
+                  <Link href="/checkout">
+                    <button onClick={onClose} className={styles.btn}>
+                      Checkout
+                    </button>
+                  </Link>
+                ) : (
+                  <Link href="/login">
+                    <button onClick={onClose} className={styles.btn}>
+                      Please Log in to checkout
+                    </button>
+                  </Link>
+                )}
+              </>
             )}
           </div>
         </div>

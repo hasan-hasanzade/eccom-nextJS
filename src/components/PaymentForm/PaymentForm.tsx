@@ -6,6 +6,8 @@ import 'react-credit-cards-2/dist/lib/styles.scss';
 import styles from './payment.module.scss';
 import { useRouter } from 'next/navigation';
 import toast, { Toaster } from 'react-hot-toast';
+import { useSelector } from 'react-redux';
+import { cartSelector } from '../../redux/cart/selectors';
 
 export default function PaymentForm() {
   const [state, setState] = useState({
@@ -15,6 +17,13 @@ export default function PaymentForm() {
     name: '',
     focus: '',
   });
+  const items = useSelector(cartSelector);
+
+  const totalPrice = items.reduce((sum, item) => sum + item.price * item.count, 0);
+
+  if (totalPrice === 0) {
+    return null;
+  }
 
   const handleInputChange = (e: any) => {
     const { name, value } = e.target;
