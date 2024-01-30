@@ -35,7 +35,7 @@ export default function HeroSection() {
               Choose the best healthier way <br /> of life
             </motion.h1>
             <Link href="/shop">
-              <motion.button custom={2.5} variants={textAnimation} className={styles.button}>
+              <motion.button custom={2.5} variants={textAnimation} className={`${styles.button} ${styles.btnAnim}`}>
                 Explore Now{' '}
                 <span className={styles.arrow}>
                   <BsFillArrowRightCircleFill />

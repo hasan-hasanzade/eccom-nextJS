@@ -87,3 +87,4 @@ $maxWidthContainer: 1400;
 	gap: $gap;
 	grid-template-columns: repeat(auto-#{$type}, minmax($min, $max));
 }
+

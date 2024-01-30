@@ -161,9 +161,6 @@ export default function Register() {
         <div className={styles.shape}></div>
         <div className={styles.shape}></div>
       </div>
-      <div className={`${styles.image} ${styles._ibg}`}>
-        <Image src="/img/bgsign.jpg" alt="Background Image" width={2400} height={1904} />
-      </div>
       <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
         <h3>Sign Up</h3>
 

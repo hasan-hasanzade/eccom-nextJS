@@ -42,12 +42,12 @@ export default function Products() {
       viewport={{ amount: 0.2, once: true }}
       className={styles.products}>
       <div className="container">
-        <motion.h3 custom={1} variants={textAnimation} className={styles.title}>
+        <h3 className={styles.title}>
           Categories
-        </motion.h3>
-        <motion.div custom={1} variants={textAnimation} className={styles.subtitle}>
+        </h3>
+        <div  className={styles.subtitle}>
           Our Products
-        </motion.div>
+        </div>
         {items.length !== 0 ? (
           <div className={styles.body}>
             {items.slice(8, 16).map((obj: any) => (

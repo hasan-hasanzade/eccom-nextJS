@@ -111,9 +111,6 @@ export default function LoginLeave() {
           </div>
         </form>
       </div>
-      <div className={`${styles.image} ${styles._ibg}`}>
-        <Image src='/img/login.jpg' alt="Background Image" width={5760} height={3840}/>
-      </div>
       <Toaster position="bottom-left" reverseOrder={false} />
     </section>
   );

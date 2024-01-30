@@ -27,8 +27,14 @@ export const Cart: React.FC<CartProps> = ({ onClose, items, totalPrice, opened }
     dispatch(clearCart());
   };
 
+  const overlayClickHandler = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    if (event.target === event.currentTarget) {
+      onClose();
+    }
+  };
+
   return (
-    <div className={`${styles.overlay} ${opened ? styles.overlayVisible : ''}`}>
+    <div className={`${styles.overlay} ${opened ? styles.overlayVisible : ''}`} onClick={overlayClickHandler}>
       <div className={styles.drawer}>
         <div className={styles.inner}>
           <div className={styles.heading}>
